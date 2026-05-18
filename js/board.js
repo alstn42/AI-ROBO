@@ -99,11 +99,12 @@ Object.assign(window.Lounge, {
         window.Lounge.currentId = id;
         const s = await getDoc(doc(db, "Lounge_Board", id));
         if (s.exists()) {
+            const lang = localStorage.getItem('robo_lang') || 'ko';
             const d = s.data();
             document.getElementById('vTitle').innerText = d.title;
             document.getElementById('vAuthor').innerText = d.author;
             document.getElementById('vAvatar').innerText = d.author ? d.author.charAt(0) : '?';
-            document.getElementById('vDate').innerText = d.createdAt ? new Date(d.createdAt.seconds * 1000).toLocaleString() : '방금 전';
+            document.getElementById('vDate').innerText = d.createdAt ? new Date(d.createdAt.seconds * 1000).toLocaleString(lang) : '...';
             document.getElementById('vContent').innerText = d.content;
             document.getElementById('vLikes').innerText = d.likes || 0;
             
@@ -121,12 +122,13 @@ Object.assign(window.Lounge, {
             list.innerHTML = '';
             document.getElementById('vCmtCount').innerText = snap.size;
             snap.forEach(d => {
+                const lang = localStorage.getItem('robo_lang') || 'ko';
                 const c = d.data();
                 list.innerHTML += `
                     <div style="margin-bottom:15px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
                         <div style="display:flex; justify-content:space-between; font-size:0.85rem;">
                             <b style="color:#0066ff">${c.author}</b>
-                            <span style="color:#94a3b8">${c.createdAt ? new Date(c.createdAt.seconds * 1000).toLocaleString() : ''}</span>
+                            <span style="color:#94a3b8">${c.createdAt ? new Date(c.createdAt.seconds * 1000).toLocaleString(lang) : ''}</span>
                         </div>
                         <div style="margin-top:5px; color:#475569;">${c.content}</div>
                     </div>`;
@@ -135,9 +137,10 @@ Object.assign(window.Lounge, {
     },
 
     like: async () => {
+        const lang = localStorage.getItem('robo_lang') || 'ko';
         const id = window.Lounge.currentId;
         const voted = JSON.parse(localStorage.getItem('ROBO_VOTED') || '{}');
-        if (voted[id]) return alert('이미 추천하셨습니다.');
+        if (voted[id]) return alert(translations[lang].alert_already_voted);
         
         await updateDoc(doc(db, "Lounge_Board", id), { likes: increment(1) });
         voted[id] = true;

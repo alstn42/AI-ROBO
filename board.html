@@ -299,12 +299,12 @@
             </div>
 
             <div style="background: #f8fafc; border-radius: 20px; padding: 30px;">
-                <h4 style="margin-bottom: 20px;">댓글 <span id="vCmtCount" style="color:var(--board-primary);">0</span></h4>
+                <h4 style="margin-bottom: 20px;"><span data-i18n="comment_title">댓글</span> <span id="vCmtCount" style="color:var(--board-primary);">0</span></h4>
                 <div id="cmtList" style="margin-bottom: 30px;"></div>
                 <form id="cmtForm" style="display: grid; grid-template-columns: 100px 1fr 100px; gap: 10px;">
-                    <input type="text" id="cAuthor" placeholder="이름" class="form-input" style="margin-bottom:0;" required>
-                    <input type="text" id="cText" placeholder="따뜻한 댓글을 남겨주세요" class="form-input" style="margin-bottom:0;" required>
-                    <button type="submit" class="btn-lounge btn-lounge-primary" style="padding:10px;">등록</button>
+                    <input type="text" id="cAuthor" placeholder="이름" data-i18n="comment_name_ph" class="form-input" style="margin-bottom:0;" required>
+                    <input type="text" id="cText" placeholder="따뜻한 댓글을 남겨주세요" data-i18n="comment_content_ph" class="form-input" style="margin-bottom:0;" required>
+                    <button type="submit" class="btn-lounge btn-lounge-primary" style="padding:10px;" data-i18n="comment_btn">등록</button>
                 </form>
             </div>
         </div>
