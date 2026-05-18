@@ -210,12 +210,12 @@
         <div class="container nav">
             <a href="index.html" class="logo">AI-<span>ROBO</span></a>
             <div class="nav-links">
-                <a href="index.html">홈</a>
-                <a href="products.html">제품정보</a>
-                <a href="solutions.html">솔루션</a>
-                <a href="guide.html">가이드</a>
-                <a href="board.html" class="active">자유게시판</a>
-                <a href="community.html">커뮤니티</a>
+                <a href="index.html" data-i18n="home">홈</a>
+                <a href="products.html" data-i18n="products">제품정보</a>
+                <a href="solutions.html" data-i18n="solutions">솔루션</a>
+                <a href="guide.html" data-i18n="guide">가이드</a>
+                <a href="board.html" class="active" data-i18n="board">자유게시판</a>
+                <a href="community.html" data-i18n="community">커뮤니티</a>
             </div>
             <div class="nav-actions">
                 <button class="btn btn-primary" onclick="location.href='community.html#qna'" data-i18n="consult">문의하기</button>
@@ -237,9 +237,9 @@
         <div class="board-header-actions">
             <div class="search-bar">
                 <i class="fas fa-search" style="color: #94a3b8;"></i>
-                <input type="text" id="boardSearch" placeholder="관심 있는 주제를 검색해 보세요">
+                <input type="text" id="boardSearch" placeholder="관심 있는 주제를 검색해 보세요" data-i18n="board_search_ph">
             </div>
-            <button class="btn-lounge btn-lounge-primary" onclick="Lounge.openWrite()">
+            <button class="btn-lounge btn-lounge-primary" onclick="Lounge.openWrite()" data-i18n="new_post_btn">
                 <i class="fas fa-pen-nib" style="margin-right: 8px;"></i> 새로운 글 작성
             </button>
         </div>
@@ -252,18 +252,18 @@
     <!-- [Write/Edit Modal] -->
     <div class="modal" id="writeModal">
         <div class="modal-body">
-            <h2 id="modalTitle" style="font-family: 'Outfit'; font-size: 2rem; margin-bottom: 30px;">당신의 생각을 들려주세요</h2>
+            <h2 id="modalTitle" style="font-family: 'Outfit'; font-size: 2rem; margin-bottom: 30px;" data-i18n="modal_write_title">당신의 생각을 들려주세요</h2>
             <form id="loungeForm">
                 <input type="hidden" id="postId">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <input type="text" id="pAuthor" class="form-input" placeholder="작성자 성함" required>
-                    <input type="password" id="pPassword" class="form-input" placeholder="비밀번호" required>
+                    <input type="text" id="pAuthor" class="form-input" placeholder="작성자 성함" data-i18n="form_author_ph" required>
+                    <input type="password" id="pPassword" class="form-input" placeholder="비밀번호" data-i18n="form_pw_ph" required>
                 </div>
-                <input type="text" id="pTitle" class="form-input" placeholder="제목을 입력하세요" required>
-                <textarea id="pContent" class="form-input" rows="10" placeholder="자유롭게 내용을 작성해 보세요. 로봇 기술뿐만 아니라 일상의 이야기도 좋습니다." required></textarea>
+                <input type="text" id="pTitle" class="form-input" placeholder="제목을 입력하세요" data-i18n="form_title_ph" required>
+                <textarea id="pContent" class="form-input" rows="10" placeholder="자유롭게 내용을 작성해 보세요. 로봇 기술뿐만 아니라 일상의 이야기도 좋습니다." data-i18n="form_board_content_ph" required></textarea>
                 <div style="display: flex; gap: 15px; margin-top: 20px;">
-                    <button type="button" class="btn-lounge" style="flex:1; background:#f1f5f9;" onclick="Lounge.close()">닫기</button>
-                    <button type="submit" class="btn-lounge btn-lounge-primary" style="flex:2;">Lounge 게시하기</button>
+                    <button type="button" class="btn-lounge" style="flex:1; background:#f1f5f9;" onclick="Lounge.close()" data-i18n="close">닫기</button>
+                    <button type="submit" class="btn-lounge btn-lounge-primary" style="flex:2;" data-i18n="btn_post">Lounge 게시하기</button>
                 </div>
             </form>
         </div>
@@ -294,8 +294,8 @@
             </div>
 
             <div style="display: flex; justify-content: flex-end; gap:10px; margin-bottom: 40px;">
-                <button onclick="Lounge.edit()" style="background:none; border:none; color:#64748b; cursor:pointer;"><i class="fas fa-edit"></i> 수정</button>
-                <button onclick="Lounge.delete()" style="background:none; border:none; color:#ef4444; cursor:pointer;"><i class="fas fa-trash"></i> 삭제</button>
+                <button onclick="Lounge.edit()" style="background:none; border:none; color:#64748b; cursor:pointer;" data-i18n="btn_edit"><i class="fas fa-edit"></i> 수정</button>
+                <button onclick="Lounge.delete()" style="background:none; border:none; color:#ef4444; cursor:pointer;" data-i18n="btn_delete"><i class="fas fa-trash"></i> 삭제</button>
             </div>
 
             <div style="background: #f8fafc; border-radius: 20px; padding: 30px;">
@@ -315,21 +315,21 @@
             <div class="footer-grid">
                 <div>
                     <h3 style="color: white; margin-bottom: 25px;">AI-ROBO</h3>
-                    <p style="opacity: 0.7;">산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.</p>
+                    <p style="opacity: 0.7;" data-i18n="footer_desc">산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.</p>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 25px;">Quick Links</h4>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="quick_links">Quick Links</h4>
                     <ul style="opacity: 0.7; line-height: 2;">
-                        <li><a href="index.html">홈</a></li>
-                        <li><a href="products.html">제품정보</a></li>
-                        <li><a href="solutions.html">솔루션</a></li>
-                        <li><a href="guide.html">가이드</a></li>
-                        <li><a href="board.html">자유게시판</a></li>
-                        <li><a href="community.html">커뮤니티</a></li>
+                        <li><a href="index.html" data-i18n="home">홈</a></li>
+                        <li><a href="products.html" data-i18n="products">제품정보</a></li>
+                        <li><a href="solutions.html" data-i18n="solutions">솔루션</a></li>
+                        <li><a href="guide.html" data-i18n="guide">가이드</a></li>
+                        <li><a href="board.html" data-i18n="board">자유게시판</a></li>
+                        <li><a href="community.html" data-i18n="community">커뮤니티</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 style="color: white; margin-bottom: 25px;">Connect</h4>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="connect">Connect</h4>
                     <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> contact@ai-robo.com</p>
                     <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 02-1234-5678</p>
                 </div>

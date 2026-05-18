@@ -29,12 +29,15 @@ Object.assign(window.Lounge, {
     currentId: null,
 
     openWrite: () => {
+        const lang = localStorage.getItem('robo_lang') || 'ko';
         const form = document.getElementById('loungeForm');
         if (form) form.reset();
         const pid = document.getElementById('postId');
         if (pid) pid.value = '';
         const title = document.getElementById('modalTitle');
-        if (title) title.innerText = '당신의 생각을 들려주세요';
+        if (title && translations[lang]) {
+            title.innerText = translations[lang].modal_write_title;
+        }
         const modal = document.getElementById('writeModal');
         if (modal) modal.classList.add('active');
     },
@@ -50,9 +53,10 @@ Object.assign(window.Lounge, {
         // 실시간 목록 감시
         const q = query(collection(db, "Lounge_Board"), orderBy("createdAt", "desc"));
         onSnapshot(q, (snap) => {
+            const lang = localStorage.getItem('robo_lang') || 'ko';
             boardContainer.innerHTML = '';
             if (snap.empty) {
-                boardContainer.innerHTML = `<div style="text-align:center; padding:80px; color:#94a3b8;">아직 라운지에 이야기가 없습니다. 첫 번째 글을 남겨보세요!</div>`;
+                boardContainer.innerHTML = `<div style="text-align:center; padding:80px; color:#94a3b8;">${translations[lang].board_empty}</div>`;
                 return;
             }
 
@@ -74,7 +78,7 @@ Object.assign(window.Lounge, {
                         </div>
                     </div>
                     <div class="post-stats">
-                        <div class="stat-icon"><b>${post.likes || 0}</b> 추천</div>
+                        <div class="stat-icon"><b>${post.likes || 0}</b> ${translations[lang].board_recommend}</div>
                     </div>
                 `;
                 card.onclick = () => window.Lounge.view(post.id);
@@ -143,7 +147,8 @@ Object.assign(window.Lounge, {
     },
 
     edit: async () => {
-        const pw = prompt('비밀번호를 입력하세요:');
+        const lang = localStorage.getItem('robo_lang') || 'ko';
+        const pw = prompt(translations[lang].prompt_pw);
         const s = await getDoc(doc(db, "Lounge_Board", window.Lounge.currentId));
         if (s.data().password === pw || pw === MASTER_KEY) {
             const d = s.data();
@@ -152,17 +157,18 @@ Object.assign(window.Lounge, {
             document.getElementById('pTitle').value = d.title;
             document.getElementById('pContent').value = d.content;
             document.getElementById('pPassword').value = d.password;
-            document.getElementById('modalTitle').innerText = '이야기 다듬기';
+            document.getElementById('modalTitle').innerText = translations[lang].modal_edit_title;
             window.Lounge.close();
             document.getElementById('writeModal').classList.add('active');
-        } else alert('비밀번호가 일치하지 않습니다.');
+        } else alert(translations[lang].alert_wrong_pw);
     },
 
     delete: async () => {
-        const pw = prompt('삭제를 위해 비밀번호를 입력해주세요:');
+        const lang = localStorage.getItem('robo_lang') || 'ko';
+        const pw = prompt(translations[lang].prompt_pw);
         const s = await getDoc(doc(db, "Lounge_Board", window.Lounge.currentId));
         if (s.data().password === pw || pw === MASTER_KEY) {
-            if (confirm('정말로 삭제하시겠습니까?')) {
+            if (confirm(translations[lang].confirm_delete)) {
                 await deleteDoc(doc(db, "Lounge_Board", window.Lounge.currentId));
                 window.Lounge.close();
             }
