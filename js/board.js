@@ -104,7 +104,7 @@ Object.assign(window.Lounge, {
             document.getElementById('vTitle').innerText = d.title;
             document.getElementById('vAuthor').innerText = d.author;
             document.getElementById('vAvatar').innerText = d.author ? d.author.charAt(0) : '?';
-            document.getElementById('vDate').innerText = d.createdAt ? new Date(d.createdAt.seconds * 1000).toLocaleString(lang) : '...';
+            document.getElementById('vDate').innerText = d.createdAt ? new Date(d.createdAt.seconds * 1000).toLocaleString('en-US') : '...';
             document.getElementById('vContent').innerText = d.content;
             document.getElementById('vLikes').innerText = d.likes || 0;
             
@@ -128,7 +128,7 @@ Object.assign(window.Lounge, {
                     <div style="margin-bottom:15px; border-bottom:1px solid #f1f5f9; padding-bottom:10px;">
                         <div style="display:flex; justify-content:space-between; font-size:0.85rem;">
                             <b style="color:#0066ff">${c.author}</b>
-                            <span style="color:#94a3b8">${c.createdAt ? new Date(c.createdAt.seconds * 1000).toLocaleString(lang) : ''}</span>
+                            <span style="color:#94a3b8">${c.createdAt ? new Date(c.createdAt.seconds * 1000).toLocaleString('en-US') : ''}</span>
                         </div>
                         <div style="margin-top:5px; color:#475569;">${c.content}</div>
                     </div>`;
