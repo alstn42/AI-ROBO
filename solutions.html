@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솔루션 | AI Robo Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">AI-<span>ROBO</span></a>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home">홈</a>
+                <a href="products.html" data-i18n="products">제품정보</a>
+                <a href="solutions.html" class="active" data-i18n="solutions">솔루션</a>
+                <a href="guide.html" data-i18n="guide">가이드</a>
+                <a href="board.html" data-i18n="board">자유게시판</a>
+                <a href="community.html" data-i18n="community">커뮤니티</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-primary" onclick="location.href='community.html#qna'" data-i18n="consult">문의하기</button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div style="padding: 150px 0 100px; text-align: center;">
+        <div class="container">
+            <h1 data-i18n="sol_title">산업별 맞춤형 솔루션</h1>
+            <p style="margin-top: 20px; color: #64748b;" data-i18n="sol_desc">AI-ROBO는 다양한 현장의 문제를 해결합니다.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; margin-top: 80px; text-align: left;">
+                <div class="card">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-car"></i> <span data-i18n="sol1_title">자동차 산업</span></h3>
+                    <p data-i18n="sol1_desc">정밀한 볼트 체결, 실링 도포, 부품 검사 등 복잡한 공정을 AI 비전 기술로 자동화합니다.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-microchip"></i> <span data-i18n="sol2_title">전자/반도체</span></h3>
+                    <p data-i18n="sol2_desc">ESD 보호 기능을 갖춘 로봇으로 민감한 전자 부품의 핸들링과 PCB 검사를 수행합니다.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-box-open"></i> <span data-i18n="sol3_title">물류/팔레타이징</span></h3>
+                    <p data-i18n="sol3_desc">다양한 크기의 박스를 인식하고 최적의 경로로 적재하는 AI 알고리즘을 제공합니다.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-flask"></i> <span data-i18n="sol4_title">의료/실험실</span></h3>
+                    <p data-i18n="sol4_desc">정확한 용량 취급과 반복적인 테스트 공정을 24시간 오차 없이 수행합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: white; margin-bottom: 25px;">AI-ROBO</h3>
+                    <p style="opacity: 0.7;" data-i18n="footer_desc">산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="quick_links">Quick Links</h4>
+                    <ul style="opacity: 0.7; line-height: 2;">
+                        <li><a href="index.html" data-i18n="home">홈</a></li>
+                        <li><a href="products.html" data-i18n="products">제품정보</a></li>
+                        <li><a href="solutions.html" data-i18n="solutions">솔루션</a></li>
+                        <li><a href="guide.html" data-i18n="guide">가이드</a></li>
+                        <li><a href="board.html" data-i18n="board">자유게시판</a></li>
+                        <li><a href="community.html" data-i18n="community">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="connect">Connect</h4>
+                    <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> contact@ai-robo.com</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 02-1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 AI-ROBO Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

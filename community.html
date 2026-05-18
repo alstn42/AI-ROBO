@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티 | AI Robo Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .community-header { padding: 150px 0 60px; background: var(--primary); color: white; text-align: center; }
+        .tabs { display: flex; justify-content: center; gap: 20px; margin-top: -30px; position: relative; z-index: 10; }
+        .tab-btn { padding: 15px 40px; background: white; border-radius: 50px; font-weight: 600; cursor: pointer; box-shadow: 0 10px 15px rgba(0,0,0,0.1); transition: var(--transition); border: 2px solid transparent; }
+        .tab-btn.active { color: var(--primary); border-color: var(--primary); transform: translateY(-5px); }
+        .tab-content { display: none; padding: 80px 0; }
+        .tab-content.active { display: block; }
+        .qna-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .qna-table th { background: #f1f5f9; padding: 20px; text-align: left; font-weight: 600; }
+        .qna-table td { padding: 20px; border-bottom: 1px solid var(--border); }
+        .secret-icon { color: #94a3b8; margin-right: 8px; }
+        .write-form { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 1px solid var(--border); margin-top: 50px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">AI-<span>ROBO</span></a>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home">홈</a>
+                <a href="products.html" data-i18n="products">제품정보</a>
+                <a href="solutions.html" data-i18n="solutions">솔루션</a>
+                <a href="guide.html" data-i18n="guide">가이드</a>
+                <a href="board.html" data-i18n="board">자유게시판</a>
+                <a href="community.html" class="active" data-i18n="community">커뮤니티</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-primary" onclick="location.href='community.html#qna'" data-i18n="consult">문의하기</button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="community-header">
+        <div class="container">
+            <h1 style="color: white; font-size: 3rem; margin-bottom: 20px;" data-i18n="community">커뮤니티</h1>
+            <p style="opacity: 0.8;" data-i18n="comm_desc">기술 소식과 전문 상담을 한 곳에서 확인하세요.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab-btn active" onclick="openTab(event, 'news')" data-i18n="tab_news">AI 로봇 뉴스</div>
+            <div class="tab-btn" onclick="openTab(event, 'qna')" data-i18n="tab_qna">기술 문의 (Q&A)</div>
+        </div>
+
+        <div id="news" class="tab-content active">
+            <div id="news-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px;">
+                <!-- Content handled by board.js -->
+            </div>
+        </div>
+
+        <div id="qna" class="tab-content">
+            <div class="write-form" id="write-section">
+                <h2 style="margin-bottom: 30px;" data-i18n="qna_main_title">기술 문의 및 도입 상담</h2>
+                <form id="qnaForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label data-i18n="form_name">성함/기업명</label>
+                            <input type="text" id="author" data-i18n="form_name_ph" placeholder="작성자 이름을 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_contact">연락처/이메일</label>
+                            <input type="text" id="contact" data-i18n="form_contact_ph" placeholder="연락처를 입력하세요" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_title">제목</label>
+                        <input type="text" id="title" data-i18n="form_title_ph" placeholder="제목을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_content">내용</label>
+                        <textarea id="content" rows="6" data-i18n="form_content_ph" placeholder="자세한 문의 내용을 입력해 주세요" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.1rem; margin-top: 20px;" data-i18n="board_write">문의 등록하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: white; margin-bottom: 25px;">AI-ROBO</h3>
+                    <p style="opacity: 0.7;" data-i18n="footer_desc">산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="quick_links">Quick Links</h4>
+                    <ul style="opacity: 0.7; line-height: 2;">
+                        <li><a href="index.html" data-i18n="home">홈</a></li>
+                        <li><a href="products.html" data-i18n="products">제품정보</a></li>
+                        <li><a href="solutions.html" data-i18n="solutions">솔루션</a></li>
+                        <li><a href="guide.html" data-i18n="guide">가이드</a></li>
+                        <li><a href="board.html" data-i18n="board">자유게시판</a></li>
+                        <li><a href="community.html" data-i18n="community">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="connect">Connect</h4>
+                    <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> contact@ai-robo.com</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 02-1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 AI-ROBO Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/board.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) { tabcontent[i].classList.remove("active"); }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) { tablinks[i].classList.remove("active"); }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+const translations = {
+    ko: {
+        home: "홈",
+        products: "제품정보",
+        solutions: "솔루션",
+        guide: "가이드",
+        board: "자유게시판",
+        community: "커뮤니티",
+        consult: "문의하기",
+        hero_title: "미래를 움직이는<br>AI 로봇 솔루션",
+        hero_desc: "AI-ROBO는 산업 자동화의 새로운 기준을 제시합니다. 더 똑똑하고 안전한 협동 로봇으로 생산성을 혁신하세요.",
+        quick_links: "Quick Links",
+        connect: "Connect",
+        footer_desc: "산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.",
+        // Products
+        spec_payload: "가용 하중",
+        spec_reach: "반경",
+        spec_precision: "반복 정밀도",
+        // Community
+        qna_title: "1:1 기술 문의",
+        form_name: "이름",
+        form_email: "이메일",
+        form_title: "제목",
+        form_content: "내용",
+        form_title_ph: "제목을 입력하세요",
+        form_content_ph: "자세한 문의 내용을 입력해 주세요",
+        board_write: "문의 등록하기",
+        // Board
+        lounge_title: "Lounge & Connect",
+        lounge_desc: "사용자들이 들려주는 로봇 기술의 살아있는 이야기"
+    },
+    en: {
+        home: "Home",
+        products: "Products",
+        solutions: "Solutions",
+        guide: "Guide",
+        board: "Lounge",
+        community: "Community",
+        consult: "Contact Us",
+        hero_title: "Driving the Future with<br>AI Robot Solutions",
+        hero_desc: "AI-ROBO sets new standards in industrial automation. Innovate productivity with smarter, safer collaborative robots.",
+        quick_links: "Quick Links",
+        connect: "Connect",
+        footer_desc: "A leading provider of collaborative robot solutions, driving innovation in industrial automation.",
+        // Products
+        spec_payload: "Payload",
+        spec_reach: "Reach",
+        spec_precision: "Precision",
+        // Community
+        qna_title: "1:1 Technical Inquiry",
+        form_name: "Name",
+        form_email: "Email",
+        form_title: "Subject",
+        form_content: "Message",
+        form_title_ph: "Enter subject",
+        form_content_ph: "Enter your message in detail",
+        board_write: "Submit Inquiry",
+        // Board
+        lounge_title: "Lounge & Connect",
+        lounge_desc: "Vibrant stories of robot technology shared by users"
+    }
+};
+
+export default translations;

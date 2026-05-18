@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Robo Solutions | 차세대 AI 협동로봇 기업</title>
+    <meta name="description" content="AI 기반 협동로봇 솔루션의 글로벌 리더. 더 스마트하고 안전한 산업 자동화를 경험하세요.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Robo Solutions | AI 협동로봇">
+    <meta property="og:description" content="산업의 미래를 바꾸는 AI 기반 협동로봇 솔루션">
+    <meta property="og:image" content="images/hero.png">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">AI-<span>ROBO</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active" data-i18n="home">홈</a>
+                <a href="products.html" data-i18n="products">제품정보</a>
+                <a href="solutions.html" data-i18n="solutions">솔루션</a>
+                <a href="guide.html" data-i18n="guide">가이드</a>
+                <a href="board.html" data-i18n="board">자유게시판</a>
+                <a href="community.html" data-i18n="community">커뮤니티</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-primary" onclick="location.href='community.html#qna'" data-i18n="consult">문의하기</button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 50px;">
+                <div class="hero-content">
+                    <h1 data-i18n="hero_title">미래를 움직이는<br>AI 로봇 솔루션</h1>
+                    <p data-i18n="hero_desc">AI-ROBO는 산업 자동화의 새로운 기준을 제시합니다. 더 똑똑하고 안전한 협동 로봇으로 생산성을 혁신하세요.</p>
+                    <div class="hero-btns" style="display: flex; gap: 15px;">
+                        <button class="btn btn-primary" style="background: white; color: var(--primary);" data-i18n="hero_btn_product">제품 알아보기</button>
+                        <button class="btn" style="border: 1px solid white; color: white;" data-i18n="hero_btn_video">영상 보기</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.png" alt="AI 협동로봇 히어로 이미지" style="border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats" style="padding: 80px 0; background: white;">
+            <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 30px;">
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 5px;">120+</h3>
+                    <p style="color: var(--text-gray);" data-i18n="stat_partners">글로벌 파트너사</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 5px;">30%</h3>
+                    <p style="color: var(--text-gray);" data-i18n="stat_prod">생산성 향상</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 5px;">0%</h3>
+                    <p style="color: var(--text-gray);" data-i18n="stat_accident">사고 발생률</p>
+                </div>
+                <div class="stat-item">
+                    <h3 style="font-size: 2.5rem; margin-bottom: 5px;">24/7</h3>
+                    <p style="color: var(--text-gray);" data-i18n="stat_monitoring">실시간 모니터링</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Preview (Firebase 연동 예정) -->
+        <section class="news-preview" style="padding: 100px 0; background: var(--bg-main);">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 50px;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 10px;" data-i18n="news_title">최신 소식</h2>
+                        <p style="color: var(--text-gray);" data-i18n="news_desc">AI-ROBO의 최신 기술 업데이트와 기업 뉴스를 확인하세요.</p>
+                    </div>
+                    <a href="community.html" style="color: var(--primary); font-weight: 600;" data-i18n="news_more">모든 소식 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div id="home-news-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <!-- Firebase에서 데이터를 가져와 렌더링할 예정 -->
+                    <div class="card">
+                        <span style="display: inline-block; padding: 4px 12px; background: var(--border); border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px;">UPDATE</span>
+                        <h3 style="margin-bottom: 15px;" data-i18n="news1_title">AI Vision 업데이트: 야간 작업 정밀도 30% 향상</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 20px;" data-i18n="news1_desc">새로운 AI 비전 알고리즘을 통해 저조도 환경에서도 정밀한 작업이 가능해졌습니다.</p>
+                        <span style="font-size: 0.85rem; color: #94a3b8;">2026.05.10</span>
+                    </div>
+                    <div class="card">
+                        <span style="display: inline-block; padding: 4px 12px; background: var(--border); border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px;">EVENT</span>
+                        <h3 style="margin-bottom: 15px;" data-i18n="news2_title">2026 글로벌 로보틱스 엑스포 참가 리포트</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 20px;" data-i18n="news2_desc">독일에서 열린 최대 규모의 로봇 박람회에서 AI-ROBO의 기술력이 극찬을 받았습니다.</p>
+                        <span style="font-size: 0.85rem; color: #94a3b8;">2026.05.08</span>
+                    </div>
+                    <div class="card">
+                        <span style="display: inline-block; padding: 4px 12px; background: var(--border); border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px;">GUIDE</span>
+                        <h3 style="margin-bottom: 15px;" data-i18n="news3_title">협동로봇 안전 가이드: 펜스 없는 작업장의 설계</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 20px;" data-i18n="news3_desc">함께 일하는 동료로서의 로봇, 안전을 위한 최적의 배치 방법을 안내합니다.</p>
+                        <span style="font-size: 0.85rem; color: #94a3b8;">2026.05.05</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: white; margin-bottom: 25px;">AI-ROBO</h3>
+                    <p style="opacity: 0.7; font-size: 0.95rem;" data-i18n="footer_desc">산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="quick_links">Quick Links</h4>
+                    <ul style="opacity: 0.7; line-height: 2;">
+                        <li><a href="index.html" data-i18n="home">홈</a></li>
+                        <li><a href="products.html" data-i18n="products">제품정보</a></li>
+                        <li><a href="solutions.html" data-i18n="solutions">솔루션</a></li>
+                        <li><a href="guide.html" data-i18n="guide">가이드</a></li>
+                        <li><a href="board.html" data-i18n="board">자유게시판</a></li>
+                        <li><a href="community.html" data-i18n="community">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="connect">Connect</h4>
+                    <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> contact@ai-robo.com</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 02-1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 AI-ROBO Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (v9 compatible via CDN) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getFirestore, collection, getDocs, limit, query, orderBy } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+        
+        // Firebase 설정 (사용자 실제 정보로 대체 가능)
+        const firebaseConfig = {
+            apiKey: "AIzaSyDummyKeyForDemo",
+            authDomain: "ai-robo-demo.firebaseapp.com",
+            projectId: "ai-robo-demo",
+            storageBucket: "ai-robo-demo.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:dummy"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // 메인 페이지 뉴스 리스트 로드 (데모용 로직)
+        async function loadNews() {
+            try {
+                // 실제 연동 시 아래 주석 해제
+                // const q = query(collection(db, "Robo_News"), orderBy("date", "desc"), limit(3));
+                // const querySnapshot = await getDocs(q);
+                // console.log("News loaded from Firebase");
+            } catch (e) {
+                console.warn("Firebase config is dummy. Showing fallback content.");
+            }
+        }
+        loadNews();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

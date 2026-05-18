@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품정보 | AI Robo Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-hero {
+            padding: 150px 0 100px;
+            background: #f8fafc;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 100px 0;
+        }
+        .product-card {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: white;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .product-card:hover { border-color: var(--primary); transform: translateY(-10px); }
+        .product-card img { margin: 0 auto 30px; height: 250px; object-fit: contain; }
+        .spec-list { margin-top: 20px; text-align: left; font-size: 0.9rem; }
+        .spec-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+        .product-card { cursor: pointer; position: relative; overflow: hidden; }
+        .detail-hint { 
+            margin-top: 25px; 
+            color: var(--primary); 
+            font-weight: 700; 
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .product-card:hover .detail-hint { gap: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo">AI-<span>ROBO</span></a>
+            <div class="nav-links">
+                <a href="index.html" data-i18n="home">홈</a>
+                <a href="products.html" class="active" data-i18n="products">제품정보</a>
+                <a href="solutions.html" data-i18n="solutions">솔루션</a>
+                <a href="guide.html" data-i18n="guide">가이드</a>
+                <a href="board.html" data-i18n="board">자유게시판</a>
+                <a href="community.html" data-i18n="community">커뮤니티</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-primary" onclick="location.href='community.html#qna'" data-i18n="consult">문의하기</button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;" data-i18n="prod_title">AI 협동로봇 라인업</h1>
+            <p style="color: var(--text-gray); font-size: 1.2rem;" data-i18n="prod_desc">귀하의 작업장에 최적화된 AI 파트너를 만나보세요.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="product-grid">
+            <!-- AI-3 -->
+            <div class="product-card" onclick="showProductDetail('AI-3')">
+                <img src="images/ai-3.png" alt="AI-3 Robot">
+                <h2 style="margin-bottom: 15px;">AI-3</h2>
+                <div class="spec-list">
+                    <div class="spec-item"><span data-i18n="spec_payload">가용 하중</span><strong>3 kg</strong></div>
+                    <div class="spec-item"><span data-i18n="spec_reach">반경</span><strong>500 mm</strong></div>
+                    <div class="spec-item"><span data-i18n="spec_precision">반복 정밀도</span><strong>±0.03 mm</strong></div>
+                </div>
+                <div class="detail-hint">
+                    <span data-i18n="detail_btn">상세 정보 보기</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <!-- AI-5 -->
+            <div class="product-card" onclick="showProductDetail('AI-5')">
+                <img src="images/ai-5.png" alt="AI-5 Robot">
+                <h2 style="margin-bottom: 15px;">AI-5</h2>
+                <div class="spec-list">
+                    <div class="spec-item"><span data-i18n="spec_payload">가용 하중</span><strong>5 kg</strong></div>
+                    <div class="spec-item"><span data-i18n="spec_reach">반경</span><strong>850 mm</strong></div>
+                    <div class="spec-item"><span data-i18n="spec_precision">반복 정밀도</span><strong>±0.03 mm</strong></div>
+                </div>
+                <div class="detail-hint">
+                    <span data-i18n="detail_btn">상세 정보 보기</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+            <!-- AI-10 -->
+            <div class="product-card" onclick="showProductDetail('AI-10')">
+                <img src="images/ai-10.png" alt="AI-10 Robot">
+                <h2 style="margin-bottom: 15px;">AI-10</h2>
+                <div class="spec-list">
+                    <div class="spec-item"><span data-i18n="spec_payload">가용 하중</span><strong>10 kg</strong></div>
+                    <div class="spec-item"><span data-i18n="spec_reach">반경</span><strong>1300 mm</strong></div>
+                    <div class="spec-item"><span data-i18n="spec_precision">반복 정밀도</span><strong>±0.05 mm</strong></div>
+                </div>
+                <div class="detail-hint">
+                    <span data-i18n="detail_btn">상세 정보 보기</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color: white; margin-bottom: 25px;">AI-ROBO</h3>
+                    <p style="opacity: 0.7;" data-i18n="footer_desc">산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.</p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="quick_links">Quick Links</h4>
+                    <ul style="opacity: 0.7; line-height: 2;">
+                        <li><a href="index.html" data-i18n="home">홈</a></li>
+                        <li><a href="products.html" data-i18n="products">제품정보</a></li>
+                        <li><a href="solutions.html" data-i18n="solutions">솔루션</a></li>
+                        <li><a href="guide.html" data-i18n="guide">가이드</a></li>
+                        <li><a href="board.html" data-i18n="board">자유게시판</a></li>
+                        <li><a href="community.html" data-i18n="community">커뮤니티</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 25px;" data-i18n="connect">Connect</h4>
+                    <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> contact@ai-robo.com</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 02-1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 AI-ROBO Solutions. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
