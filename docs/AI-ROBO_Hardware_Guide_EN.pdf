@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<</Type/Catalog/Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type/Pages/Count 1/Kids[3 0 R]>>
+endobj
+3 0 obj
+<</Type/Page/Parent 2 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1<</Type/Font/Subtype/Type1/BaseFont/Helvetica-Bold>>/F2<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>>>>>/Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 1500>>
+stream
+BT
+/F1 24 Tf
+70 780 Td
+(AI-ROBO Hardware Installation Guide) Tj
+0 -40 Td
+/F2 12 Tf
+(Thank you for choosing AI-ROBO. This guide ensures a safe setup.) Tj
+0 -50 Td
+/F1 16 Tf
+(Section 1: Safety Precautions) Tj
+0 -25 Td
+/F2 11 Tf
+(- Read all instructions carefully before starting.) Tj
+0 -20 Td
+(- Do not operate in wet or hazardous environments.) Tj
+0 -20 Td
+(- Always wear protective gear during the installation.) Tj
+0 -20 Td
+(- Keep hands away from robot joints during power-up.) Tj
+0 -50 Td
+/F1 16 Tf
+(Section 2: Installation Requirements) Tj
+0 -25 Td
+/F2 11 Tf
+(- Power: 200-240V AC, 50/60Hz single phase.) Tj
+0 -20 Td
+(- Temperature: 0 to 45 degrees Celsius.) Tj
+0 -20 Td
+(- Mounting: Steel base with at least 15mm thickness.) Tj
+0 -50 Td
+/F1 16 Tf
+(Section 3: Physical Setup) Tj
+0 -25 Td
+/F2 11 Tf
+(1. Secure the base to the mounting surface using provided bolts.) Tj
+0 -20 Td
+(2. Connect the robot arm to the control box using the primary cable.) Tj
+0 -20 Td
+(3. Ensure all connectors are locked and secured.) Tj
+0 -20 Td
+(4. Mount the end-effector (tool) to the robot flange.) Tj
+0 -50 Td
+/F1 16 Tf
+(Section 4: Control Box Configuration) Tj
+0 -25 Td
+/F2 11 Tf
+(- Connect the teach pendant to the dedicated port.) Tj
+0 -20 Td
+(- Switch on the main power on the back of the control box.) Tj
+0 -20 Td
+(- Follow the on-screen calibration steps on the pendant.) Tj
+0 -80 Td
+/F2 10 Tf
+(For technical support, visit: www.ai-robo-support.com) Tj
+0 -15 Td
+(Contact: support@ai-robo.com | +82 2-1234-5678) Tj
+ET
+endstream
+endobj
+trailer
+<</Size 5/Root 1 0 R>>
+startxref
+1600
+%%EOF

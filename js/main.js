@@ -48,6 +48,12 @@ const translations = {
         guide2_desc: "작업 공간 학습 및 객체 인식을 위한 소프트웨어 초기 보정 가이드입니다.",
         guide3_title: "안전 프로토콜 및 유지보수",
         guide3_desc: "정기 점검 리스트와 비상 정지 시스템 확인 절차를 포함합니다.",
+        btn_download_pdf: "Download PDF",
+        btn_step_by_step: "Step-by-Step",
+        btn_read_online: "Read Online",
+        guide1_full: "본 가이드는 AI-ROBO 하드웨어의 안전한 설치를 위한 지침서입니다.\n\n[주요 설치 단계]\n1. 로봇 베이스 고정: M8 볼트를 사용하여 15mm 이상의 강철 지지대에 고정\n2. 전원 연결: 220V 단상 전원을 컨트롤 박스에 연결\n3. 하중 설정: 제품 사양에 맞는 Tool Weight 설정\n4. 초기 기동: 비상 정지 버튼 해제 후 캘리브레이션 모드 진입",
+        guide2_full: "AI 비전 알고리즘의 정확도를 극대화하기 위한 보정 가이드입니다.\n\n[세팅 절차]\n1. 조명 설정: 작업 영역에 500 Lux 이상의 균일한 조도 확보\n2. 체커보드 인식: 제공된 캘리브레이션판을 4가지 각도에서 인식\n3. ROI 설정: 로봇의 유효 작업 영역 내 관심 구역을 드래그하여 지정\n4. 딥러닝 학습: 인공지능이 부품을 인식하도록 100장 이상의 이미지 데이터 수집",
+        guide3_full: "안전한 작업 환경을 유지하기 위한 필수 프로토콜입니다.\n\n[유지보수 리스트]\n- 주간 점검: 관절 소음 및 볼트 풀림 여부 확인\n- 월간 점검: 컨트롤 박스 필터 청소 및 팬 작동 확인\n- 분기 점검: 케이블 피복 마모 상태 정밀 검사\n\n[안전 수칙]\n- 로봇 가동 중 반경 내 절대 진입 금지\n- 비상 정지 시스템은 매 정가 기동 전 테스트 필수",
         comm_desc: "기술 소식과 전문 상담을 한 곳에서 확인하세요.",
         tab_news: "AI 로봇 뉴스",
         tab_qna: "기술 문의 (Q&A)",
@@ -106,7 +112,26 @@ const translations = {
         ai5_long_desc: "AI-5는 업계 표준을 제시하는 가장 다재다능한 협동 로봇입니다. 중량과 리치 사이의 최적의 밸런스를 통해 조립, 검사, 머신 텐딩 등 대부분의 제조 공정에서 생산성을 극대화합니다.",
         ai10_long_desc: "AI-10은 강력한 리프팅 성능과 동급 최강의 작업 반경을 제공합니다. 대형 부품의 핸들링, 팔레타이징, 용접 작업 등에 최적화되어 생산 현장의 물리적 제약을 뛰어넘는 효율을 제공합니다.",
         desc_title: "제품 상세 설명", spec_title: "기술 사양", spec_weight: "무게", spec_dof: "자유도",
-        close: "닫기"
+        close: "닫기",
+        // News Tags
+        tag_update: "업데이트", tag_event: "이벤트", tag_guide: "가이드",
+        tag_tech: "기술뉴스", tag_case: "도입사례", tag_software: "소프트웨어", tag_info: "정보",
+        // News Full Content (Community)
+        news4_title: "차세대 고정밀 액추에이터 'RA-X1' 발표",
+        news4_desc: "기존 모델 대비 정밀도를 2배 이상 높인 새로운 액추에이터 기술이 적용되었습니다.",
+        news5_title: "반도체 패키징 라인 AI-5 도입 성공 사례",
+        news5_desc: "ESD 보호 기능이 강화된 AI-5 모델을 통해 반도체 패키징 공정의 불량률을 15% 감축시켰습니다.",
+        news6_title: "RoboOS 2.1 업데이트: 경로 최적화 알고리즘",
+        news6_desc: "새로운 AI 경로 탐색 알고리즘 업데이트를 통해 작업 사이클 타임을 평균 10% 단축했습니다.",
+        news7_title: "협동로봇 구독형(RaaS) 모델 정식 런칭",
+        news7_desc: "초기 도입 비용 부담을 획기적으로 낮춘 구독형 서비스를 시작합니다. 지금 상담받으세요.",
+        news1_full: "AI-ROBO의 차세대 비전 알고리즘 'NightWatch v2'가 정식 출시되었습니다.\n\n이번 업데이트는 저조도 및 특수 조명 환경에서의 객체 인식 능력을 극적으로 향상시키는 데 초점을 맞추었습니다. 실제 공장 야간 가동 테스트 결과, 부품의 형태를 인식하고 파지하는 정밀도가 이전 버전 대비 30% 가량 향상되었음을 확인했습니다.\n\n주요 변경 사항:\n- 저고도 노이즈 제거 필터 개선\n- 딥러닝 기반 실시간 명암 보정 기술 적용\n- 엣지 컴퓨팅 최적화로 처리 속도 15% 단축",
+        news2_full: "독일 뮌헨에서 개최된 '2026 글로벌 로보틱스 엑스포'에서 AI-ROBO가 선도적인 협동로봇 솔루션을 선보여 큰 주목을 받았습니다.\n\n이번 전시회에서 당사는 독자 개발한 AI 기반 안전 감지 시스템을 시연했습니다. 펜스 없이도 인간과 로봇이 완벽하게 협업할 수 있음을 증명하며, 현장을 방문한 글로벌 파트너사들로부터 12건의 MOU 제안을 받는 성과를 거두었습니다.",
+        news3_full: "협동로봇을 도입할 때 가장 중요한 것은 작업자의 안전입니다. AI-ROBO가 제안하는 안전 가이드를 확인하세요.\n\n[핵심 체크리스트]\n1. 작업 반경 내 비상 정지 구역 설정\n2. AI 센서의 사각지대 유무 확인\n3. 로봇 파지 무게에 따른 충돌 에너지 계산\n\n당사의 AI 로봇은 ISO 10218-1 및 ISO/TS 15066 표준을 준수하며, 지능형 감화 감지 기능을 내장하고 있습니다.",
+        news4_full: "AI-ROBO 하드웨어 팀이 3년 간의 연구 끝에 고정밀 액추에이터 RA-X1을 정식 발표했습니다.\n\nRA-X1은 나노미터 단위의 오차를 제어할 수 있는 초정밀 기어 박스와 자체 개발한 고출력 BLDC 모터를 결합했습니다. 반도체 조립, 고정밀 의료 기기 제조 등 극도로 예민한 작업에 최적화되어 있습니다.\n\n양산 일정은 금년 하반기로 예정되어 있으며, 현재 사전 예약 파트너사를 모집 중입니다.",
+        news5_full: "국내 굴지의 반도체 제조 기업 S사와 진행한 스마트 공정 고도화 프로젝트의 성과를 공유합니다.\n\n기존 수동 작업으로 이루어지던 패키징 분류 공정에 AI-5 모델 12대를 투입했습니다. 그 결과 시간 당 생산량 22% 증가 및 제품 불량률 15% 감소라는 놀라운 성과를 거두었습니다. AI-5의 정전기 방지(ESD) 특화 설계가 반도체 환경에서 빛을 발한 사례입니다.",
+        news6_full: "운영체제인 RoboOS의 2.1 안정화 버전이 배포되었습니다.\n\n이번 버전의 핵심은 '지능형 경로 단축 알고리즘'입니다. 머신러닝이 현재 작업 패턴을 분석하여, 불필요한 관절 이동을 최소화하는 최적의 경로를 실시간으로 다시 생성합니다. 이 기능을 통해 작업 사이클 타임을 평균 10~12% 단축하고 전력 효율을 높일 수 있습니다.",
+        news7_full: "중소/벤처 기업의 접근성을 높이기 위해 로봇 구독 서비스(RaaS)를 시작합니다.\n\n이제 고가의 초기 구매 비용 없이도 월 구독료 지불만으로 최신 AI 협동로봇을 현장에 즉시 투입할 수 있습니다. 유지 보수 및 소프트웨어 업데이트 서비스가 기본 포함되어 있어 관리 부담이 전혀 없습니다."
     },
     en: {
         home: "Home",
@@ -156,6 +181,12 @@ const translations = {
         guide2_desc: "Initial software calibration guide for workspace learning and object recognition.",
         guide3_title: "Safety Protocols & Maintenance",
         guide3_desc: "Includes periodic inspection lists and emergency stop system check procedures.",
+        btn_download_pdf: "Download PDF",
+        btn_step_by_step: "Step-by-Step",
+        btn_read_online: "Read Online",
+        guide1_full: "This guide provides instructions for the safe installation of AI-ROBO hardware.\n\n[Key Installation Steps]\n1. Mounting: Secure robot base with M8 bolts to a 15mm+ steel support.\n2. Power: Connect 220V single-phase power to the control box.\n3. Payload: Set tool weight matching product specs.\n4. Power-up: Release emergency stop and enter calibration mode.",
+        guide2_full: "A calibration guide to maximize the accuracy of AI vision algorithms.\n\n[Setting Procedures]\n1. Lighting: Ensure 500+ Lux uniform illumination in the workspace.\n2. Checkerboard: Recognize calibration plate from 4 different angles.\n3. ROI: Drag to define the area of interest within the robot's workspace.\n4. DL Training: Collect 100+ images for AI to learn parts recognition.",
+        guide3_full: "Essential protocols to maintain a safe working environment.\n\n[Maintenance List]\n- Weekly: Check joint noise and bolt tightness.\n- Monthly: Clean control box filters and check fan operation.\n- Quarterly: Detailed inspection of cable wear.\n\n[Safety Rules]\n- Do NOT enter the operation radius while the robot is active.\n- Test the emergency stop system before initial startup daily.",
         comm_desc: "Check out technology news and expert consultation in one place.",
         tab_news: "AI Robot News",
         tab_qna: "Technical Inquiries (Q&A)",
@@ -215,7 +246,26 @@ const translations = {
         ai5_long_desc: "The AI-5 is the most versatile collaborative robot setting industry standards. It maximizes productivity in most manufacturing processes.",
         ai10_long_desc: "The AI-10 provides powerful lifting performance and best-in-class working radius. Optimized for heavy part handling and palletizing.",
         desc_title: "Detailed Description", spec_title: "Technical Specs", spec_weight: "Weight", spec_dof: "Degrees of Freedom",
-        close: "Close"
+        close: "Close",
+        // News Tags
+        tag_update: "UPDATE", tag_event: "EVENT", tag_guide: "GUIDE",
+        tag_tech: "TECH", tag_case: "CASE", tag_software: "SOFTWARE", tag_info: "INFO",
+        // News Full Content (Community)
+        news4_title: "Announcement of Next-Gen Precision Actuator 'RA-X1'",
+        news4_desc: "New actuator technology with more than double the precision of existing models.",
+        news5_title: "Success Case of AI-5 in Semiconductor Packaging Line",
+        news5_desc: "Reduced defect rates by 15% through ESD-protected AI-5 models in semiconductor processes.",
+        news6_title: "RoboOS 2.1 Update: Path Optimization Algorithm",
+        news6_desc: "Reduced work cycle times by an average of 10% with the new AI pathfinding update.",
+        news7_title: "Official Launch of RaaS (Robot-as-a-Service) Model",
+        news7_desc: "Starting a subscription service with significantly lower initial costs. Consult now.",
+        news1_full: "AI-ROBO's next-generation vision algorithm 'NightWatch v2' has been officially released.\n\nThis update focuses on dramatically improving object recognition in low-light and special lighting environments. Night operational tests confirmed a 30% improvement in precision compared to the previous version.",
+        news2_full: "AI-ROBO showcased leading collaborative robot solutions at the '2026 Global Robotics Expo' in Munich, Germany, receiving significant attention.\n\nWe demonstrated our proprietary AI-based safety sensing system, proving that humans and robots can collaborate perfectly without fences.",
+        news3_full: "Safety is the most important factor when introducing collaborative robots. Check the safety guide proposed by AI-ROBO.\n\n[Key Checklist]\n1. Emergency stop zones\n2. AI sensor blind spots\n3. Collision energy calculation\nOur robots comply with ISO 10218-1 and ISO/TS 15066 standards.",
+        news4_full: "The AI-ROBO hardware team officially announced the RA-X1 high-precision actuator after three years of research.\n\nIt combines an ultra-precision gearbox capable of nanometer-scale error control with a self-developed high-power BLDC motor. Optimized for semiconductor assembly and medical device manufacturing.",
+        news5_full: "Sharing results from a smart process enhancement project with S-Electronics. 12 AI-5 models were deployed in the packaging line, resulting in a 22% increase in hourly production and a 15% reduction in defects. The ESD-specialized design was key.",
+        news6_full: "Stable version 2.1 of RoboOS has been deployed. The core is the 'Intelligent Path Shortening Algorithm,' which analyzes work patterns to minimize unnecessary joint movements. This reduces cycle times by 10-12% and improves power efficiency.",
+        news7_full: "Starting the Robot-as-a-Service (RaaS) to increase accessibility for SMEs and startups. Deploy the latest AI cobots immediately with only monthly fees. Maintenance and software updates are included by default."
     },
     ja: {
         home: "ホーム",
@@ -265,6 +315,12 @@ const translations = {
         guide2_desc: "作業空間の学習およびオブジェクト認識のためのソフトウェア初期キャリブレーションガイドです。",
         guide3_title: "安全プロトコルおよびメンテナンス",
         guide3_desc: "定期点検リストと緊急停止システムの確認手順を含みます。",
+        btn_download_pdf: "Download PDF",
+        btn_step_by_step: "Step-by-Step",
+        btn_read_online: "Read Online",
+        guide1_full: "本ガイドはAI-ROBOハードウェアの安全な設置のための指針書です。\n\n[主要設置段階]\n1. ロボットベースの固定：M8ボルトを使用して15mm以上の鋼鉄製台に固定\n2. 電源接続：220V単相電源をコントロールボックスに接続\n3. 荷重設定：製品仕様に合わせたツール重量(Tool Weight)を設定\n4. 初期起動：非常停止ボタン解除後、キャリブレーションモードに移行",
+        guide2_full: "AIビジョンアルゴリズムの精度を最大化するためのキャリブレーションガイドです。\n\n[設定手順]\n1. 照明設定：作業エリアに500 Lux以上の均一な照度を確保\n2. チェッカーボード認識：提供された校正板を4つの角度から認識\n3. ROI設定：ロボットの有効作業エリア内に関心領域をドラッグして指定\n4. ディープラーニング学習：AIが部品を認識するように100枚以上の画像データを収集",
+        guide3_full: "安全な作業環境を維持するための必須プロトコルです。\n\n[メンテナンスリスト]\n- 週間点検：各関節の異音およびボルトの緩みを確認\n- 月間点検：コントロールボックスのフィルター清掃とファンの動作確認\n- 四半期点検：ケーブル被覆の摩耗状態を精密検査\n\n[安全規則]\n- ロボット稼働中は絶対に作業半径内に入らないでください\n- 非常停止システムは、毎日の始動前に必ずテストしてください",
         comm_desc: "技術ニュースと専門的な相談を一箇所で確認してください。",
         tab_news: "AIロボットニュース",
         tab_qna: "技術的な問い合わせ (Q&A)",
@@ -321,7 +377,26 @@ const translations = {
         ai5_long_desc: "AI-5は業界標準を示す最も多才な協働ロボットです。重量とリーチの最適なバランスにより、組立て、検査、マシンテンディングなど、ほとんどの製造工程で生産性を最大化します。",
         ai10_long_desc: "AI-10は強力なリフティング性能とクラス最高の作業半径を提供します。重量物のパレタイジングや溶接作業に最適化されており、生産現場の物理的制約を超える効率を提供します。",
         desc_title: "製品詳細説明", spec_title: "技術仕様", spec_weight: "重量", spec_dof: "自由度",
-        close: "閉じる"
+        close: "閉じる",
+        // News Tags
+        tag_update: "更新", tag_event: "イベント", tag_guide: "ガイド",
+        tag_tech: "技術ニュース", tag_case: "導入事例", tag_software: "ソフトウェア", tag_info: "情報",
+        // News Full Content (Community)
+        news4_title: "次世代高精度アクチュエータ'RA-X1'発表",
+        news4_desc: "従来モデルに比べ精度を2倍以上に高めた新しいアクチュエータ技術が適用されました。",
+        news5_title: "半導体パッケージングラインAI-5導入成功事例",
+        news5_desc: "ESD保護機能が強化されたAI-5モデルを通じて、プロセス不良率を15%削減しました。",
+        news6_title: "RoboOS 2.1アップデート：経路最適化アルゴリズム",
+        news6_desc: "新しいAI経路探索アルゴリズムにより、作業サイクルタイムを平均10%短縮しました。",
+        news7_title: "協働ロボットサブスクリプション(RaaS)正式ローンチ",
+        news7_desc: "初期導入費用の負担を大幅に軽減したサブスクリプションサービスを開始します。",
+        news1_full: "AI-ROBOの次世代ビジョンアルゴリズム'NightWatch v2'が正式にリリースされました。\n\n今回のアップデートは、低照度および特殊照明環境でのオブジェクト認識能力を劇的に向上させることに焦点を当てました。実際の工場での夜間稼働テストの結果、精度の30%向上を確認しました。",
+        news2_full: "ドイツ・ミュンヘンで開催された'2026 グローバル・ロボティクス・エキスポ'で、AI-ROBOが主導的な協働ロボットソリューションを披露し、大きな注目を集めました。\n\n当社は独自開発したAIベースの安全感知システムを実演し、フェンスなしで人間とロボットが完全に協業できることを証明しました。",
+        news3_full: "協働ロボットを導入する際、最も重要なのは作業者の安全です。AI-ROBOが提案する安全ガイドを確認してください。\n\n[チェックリスト]\n1. 非常停止区域の設定\n2. AIセンサーの死角確認\n3. 衝突エネルギーの計算\n当社のロボットはISO 10218-1およびISO/TS 15066規格に準拠しています。",
+        news4_full: "AI-ROBOハードウェアチームは3年の研究を経て、高精度アクチュエータRA-X1を正式に発表しました。\n\nナノメートル単位の誤差制御が可能な超精密ギアボックスと、自社開発の高出力BLDCモーターを結合しました。半導体組立や医療機器製造などの精密作業に最適化されています。",
+        news5_full: "S社と進めたスマート工程高度化プロジェクトの成果を共有します。AI-5モデル12台を投入した結果、生産性が22%向上し、不良率が15%減少しました。ESD特化設計が半導体環境で大きな効果を発揮した事例です。",
+        news6_full: "RoboOS 2.1安定版が配布されました。中核は'インテリジェント経路短縮アルゴリズム'です。学習により不要な関節移動を最小化し、サイクルタイムを10〜12%短縮、電力効率を高めます。",
+        news7_full: "中小・ベンチャー企業のアクセシビリティを高めるため、ロボットサブスクリプション(RaaS)を開始します。初期費用なしで、月額料金のみで最新AIロボットを導入可能です。メンテナンスとアップデートも含まれています。"
     },
     zh: {
         home: "首页",
@@ -371,6 +446,12 @@ const translations = {
         guide2_desc: "用于工作空间学习和对象识别的软件初始化校准指南。",
         guide3_title: "安全协议与维护",
         guide3_desc: "包括定期检查列表和紧急停止系统确认程序。",
+        btn_download_pdf: "Download PDF",
+        btn_step_by_step: "Step-by-Step",
+        btn_read_online: "Read Online",
+        guide1_full: "本指南提供AI-ROBO硬件安全安装的说明。\n\n[主要安装步骤]\n1. 机器人底座固定：使用M8螺栓固定在15mm以上的钢质底座上\n2. 电源连接：将220V单相电源连接至控制箱\n3. 负载设置：设置符合产品规格的工具重量\n4. 初始启动：释放紧急停止按钮后进入校准模式",
+        guide2_full: "旨在最大限度提高AI视觉算法准确度的校准指南。\n\n[设置步骤]\n1. 照明设定：确保工作区域照度均匀分布在500 Lux以上\n2. 棋盘格识别：从4个不同角度识别提供的校准板\n3. ROI设置：拖动指定机器人有效作业区域内的感兴趣区域\n4. 深度学习训练：收集100张以上图像数据，让AI学习识别零件",
+        guide3_full: "维护安全工作环境的基础协议。\n\n[维护清单]\n- 每周检查：检查关节噪音及螺栓是否有松动\n- 每月检查：清洁控制箱过滤器并确认风扇运转正常\n- 每季检查：对电缆外皮磨损情况进行精密检查\n\n[安全规则]\n- 机器人运行期间严禁进入工作半径内\n- 每日初始运行前必须测试紧急停止系统",
         comm_desc: "在一个地方确认技术新闻和专家咨询。",
         tab_news: "AI 机器人新闻",
         tab_qna: "技术咨询 (Q&A)",
@@ -427,7 +508,26 @@ const translations = {
         ai5_long_desc: "AI-5 是设定行业标准的多功能协作机器人。通过负载与半径的最佳平衡，实现大多数制造流程的生产力最大化。",
         ai10_long_desc: "AI-10 提供强大的起重性能和同类最佳的工作半径。优化了大尺寸零件处理、码垛和焊接作业。",
         desc_title: "产品详细说明", spec_title: "技术规格", spec_weight: "重量", spec_dof: "自由度",
-        close: "关闭"
+        close: "关闭",
+        // News Tags
+        tag_update: "更新", tag_event: "事件", tag_guide: "指南",
+        tag_tech: "技术新闻", tag_case: "案例", tag_software: "软件", tag_info: "信息",
+        // News Full Content (Community)
+        news4_title: "发布下一代高精度致动器 'RA-X1'",
+        news4_desc: "应用了精度比现有型号提高两倍以上的新型致动器技术。",
+        news5_title: "半导体封装线 AI-5 引入成功案例",
+        news5_desc: "通过具备 ESD 保护功能的 AI-5 模型，使生产不良率降低了 15%。",
+        news6_title: "RoboOS 2.1 更新：路径优化算法",
+        news6_desc: "通过全新的 AI 路径搜索算法，将作业循环时间平均缩短了 10%。",
+        news7_title: "协作机器人订阅型 (RaaS) 模式正式上线",
+        news7_desc: "推出大幅降低初始引入成本负担的订阅服务。欢迎咨询。",
+        news1_full: "AI-ROBO新一代视觉算法'NightWatch v2'正式发布。\n\n本次更新重点在于大幅提升低光照及特殊光照环境下的物体识别能力。工厂夜间测试显示，识别精度较前一版本提升了约30%。",
+        news2_full: "在慕尼黑举行的'2026全球机器人博览会'上，AI-ROBO展示了领先的协作机器人解决方案，备受瞩目。\n\n我们现场演示了自主研发的AI安全感应系统，证明了人机可在无围栏环境下完美协作。",
+        news3_full: "引入协作机器人时，安全是最重要的规格。请查阅AI-ROBO建议的安全指南。\n\n[核心检查表]\n1. 设置紧急停止区域\n2. 检查AI传感器死角\n3. 计算碰撞能量\n我们的机器人符合ISO 10218-1及ISO/TS 15066标准。",
+        news4_full: "AI-ROBO硬件团队历经3年研发，正式发布RA-X1高精度致动器。\n\nRA-X1结合了纳米级误差控制的超精密齿轮箱与自研高功率BLDC电机。专为半导体组装、医疗器械制造等极精密作业优化。",
+        news5_full: "分享与S公司合作的智能流程升级项目成果。投入12台AI-5模型后，时产增长22%，不良率大幅降低15%。AI-5的ESD防护设计在半导体环境中表现优异。",
+        news6_full: "RoboOS 2.1稳定版已推送。核心是'智能路径缩短算法'。通过学习工作模式，最大限度减少不必要的关节移动，缩短循环时间10-12%并提高能效。",
+        news7_full: "为提高中小企业的可及性，推出机器人订阅服务(RaaS)。现在无需昂贵的初期成本，仅需支付月费即可部署最新AI协作机器人。包含维护与更新服务。"
     },
     es: {
         home: "Inicio",
@@ -477,6 +577,12 @@ const translations = {
         guide2_desc: "Guía de calibración inicial de software para aprendizaje de espacio de trabajo y reconocimiento de objetos.",
         guide3_title: "Protocolos de Seguridad y Mantenimiento",
         guide3_desc: "Incluye listas de verificación periódicas y procedimientos de confirmación del sistema de parada de emergencia.",
+        btn_download_pdf: "Download PDF",
+        btn_step_by_step: "Step-by-Step",
+        btn_read_online: "Read Online",
+        guide1_full: "Esta guía proporciona instrucciones para la instalación segura del hardware AI-ROBO.\n\n[Pasos clave de instalación]\n1. Montaje: Asegure la base del robot con pernos M8 a un soporte de acero de 15mm+.\n2. Energía: Conecte energía monofásica de 220V a la caja de control.\n3. Carga: Configure el peso de la herramienta según las especificaciones.\n4. Arranque: Suelte la parada de emergencia y entre en modo de calibración.",
+        guide2_full: "Guía de calibración para maximizar la precisión de los algoritmos de visión AI.\n\n[Procedimientos de configuración]\n1. Iluminación: Asegure 500+ Lux de iluminación uniforme en el espacio de trabajo.\n2. Checkerboard: Reconozca la placa de calibración desde 4 ángulos diferentes.\n3. ROI: Arrastre para definir el área de interés dentro del espacio del robot.\n4. Entrenamiento DL: Recopile 100+ imágenes para que la AI aprenda las piezas.",
+        guide3_full: "Protocolos esenciales para mantener un entorno de trabajo seguro.\n\n[Lista de mantenimiento]\n- Semanal: Verifique ruidos en articulaciones y apriete de pernos.\n- Mensual: Limpie filtros de la caja de control y verifique ventiladores.\n- Trimestral: Inspección detallada del desgaste de cables.\n\n[Reglas de seguridad]\n- NO entre en el radio de operación mientras el robot esté activo.\n- Pruebe el sistema de parada de emergencia antes del inicio diario.",
         comm_desc: "Noticias tecnológicas y consultas de expertos en un solo lugar.",
         tab_news: "Noticias de Robots AI",
         tab_qna: "Consultas Técnicas (Q&A)",
@@ -533,7 +639,26 @@ const translations = {
         ai5_long_desc: "El AI-5 es el robot colaborativo más versátil que define los estándares de la industria. Maximiza la productividad en el ensamblaje y la inspección.",
         ai10_long_desc: "El AI-10 ofrece un potente rendimiento de elevación y el mejor radio de trabajo de su clase. Optimizado para el manejo de piezas grandes y paletizado.",
         desc_title: "Descripción Detallada", spec_title: "Especificaciones", spec_weight: "Peso", spec_dof: "Gdl",
-        close: "Cerrar"
+        close: "Cerrar",
+        // News Tags
+        tag_update: "ACTUALIZACIÓN", tag_event: "EVENTO", tag_guide: "GUÍA",
+        tag_tech: "TECNOLOGÍA", tag_case: "CASO", tag_software: "SOFTWARE", tag_info: "INFO",
+        // News Full Content (Community)
+        news4_title: "Anuncio del Actuador de Alta Precisión 'RA-X1'",
+        news4_desc: "Nueva tecnología con más del doble de precisión que los modelos existentes.",
+        news5_title: "Caso de Éxito de AI-5 en Línea de Empaque de Semiconductores",
+        news5_desc: "Reducción del 15% en defectos mediante modelos AI-5 con protección ESD.",
+        news6_title: "Actualización RoboOS 2.1: Algoritmo de Optimización de Rutas",
+        news6_desc: "Reducción del 10% en tiempos de ciclo con la nueva actualización de IA.",
+        news7_title: "Lanzamiento del Modelo de Suscripción (RaaS) de Cobots",
+        news7_desc: "Servicio de suscripción con costes iniciales reducidos. Consulte ahora.",
+        news1_full: "El algoritmo 'NightWatch v2' ha sido lanzado oficialmente.\n\nMejora drásticamente el reconocimiento en entornos de poca luz. Las pruebas confirmaron una mejora del 30% en la precisión nocturna.",
+        news2_full: "AI-ROBO destacó en la '2026 Global Robotics Expo' en Alemania con sus soluciones de cobots.\n\nDemostramos nuestro sistema de seguridad basado en IA, permitiendo la colaboración humano-robot sin vallas.",
+        news3_full: "La seguridad es lo primero. Revise nuestra guía de seguridad AI-ROBO.\n\n[Checklist clave]\n1. Zonas de parada de emergencia\n2. Ángulos muertos de sensores IA\n3. Cálculo de energía de colisión\nCumplimos con ISO 10218-1 e ISO/TS 15066.",
+        news4_full: "El equipo de hardware presenta el actuador RA-X1 tras 3 años de investigación.\n\nCombina una caja de cambios ultraprecisa con un motor BLDC de alta potencia. Optimizado para ensamblaje de semiconductores.",
+        news5_full: "Proyecto con S-Electronics: 12 modelos AI-5 aumentaron la producción un 22% y bajaron defectos un 15%. El diseño ESD fue clave en el entorno de semiconductores.",
+        news6_full: "RoboOS 2.1 ya está disponible. El núcleo es el 'Algoritmo Inteligente de Rutas Cortas', que reduce movimientos innecesarios y mejora la eficiencia energética en un 10-12%.",
+        news7_full: "Servicio de Suscripción (RaaS) para PYMES. Despliegue cobots IA de última generación solo con cuotas mensuales. Incluye mantenimiento y actualizaciones."
     },
     de: {
         home: "Startseite",
@@ -583,6 +708,12 @@ const translations = {
         guide2_desc: "Software-Kalibrierungsleitfaden für Arbeitsbereichslernen und Objekterkennung.",
         guide3_title: "Sicherheitsprotokolle & Wartung",
         guide3_desc: "Enthält regelmäßige Checklisten und Bestätigungsverfahren für Not-Aus-Systems.",
+        btn_download_pdf: "Download PDF",
+        btn_step_by_step: "Step-by-Step",
+        btn_read_online: "Read Online",
+        guide1_full: "Dieser Leitfaden enthält Anweisungen für die sichere Installation der AI-ROBO-Hardware.\n\n[Wichtige Installationsschritte]\n1. Montage: Befestigen Sie die Roboterbasis mit M8-Bolzen auf einer 15mm+ Stahlplatte.\n2. Strom: Schließen Sie 220V Einphasenwechselstrom an den Schaltschrank an.\n3. Nutzlast: Stellen Sie das Werkzeuggewicht entsprechend der Produktspezifikation ein.\n4. Start: Not-Aus lösen und den Kalibrierungsmodus starten.",
+        guide2_full: "Kalibrierungsleitfaden zur Maximierung der Genauigkeit von KI-Vision-Algorithmen.\n\n[Einstellungsverfahren]\n1. Beleuchtung: Sorgen Sie für 500+ Lux gleichmäßige Beleuchtung.\n2. Schachbrett: Erkennen Sie die Kalibrierplatte aus 4 verschiedenen Winkeln.\n3. ROI: Definieren Sie den Bereich von Interesse (ROI) per Drag & Drop.\n4. DL-Training: Sammeln Sie 100+ Bilder für die KI-Teileerkennung.",
+        guide3_full: "Wesentliche Protokolle zur Aufrechterhaltung einer sicheren Arbeitsumgebung.\n\n[Wartungsliste]\n- Wöchentlich: Gelenkgeräusche und Bolzenfestigkeit prüfen.\n- Monatlich: Schaltschrankfilter reinigen und Lüfterfunktion prüfen.\n- Quartalsweise: Detaillierte Inspektion der Kabelabnutzung.\n\n[Sicherheitsregeln]\n- Betreten Sie den Arbeitsradius NIEMALS während des Roboterbetriebs.\n- Testen Sie das Not-Aus-System täglich vor der ersten Inbetriebnahme.",
         comm_desc: "Erfahren Sie technische Neuigkeiten und Expertenberatung an einem Ort.",
         tab_news: "KI-Robotik-News",
         tab_qna: "Technische Fragen (Q&A)",
@@ -639,7 +770,26 @@ const translations = {
         ai5_long_desc: "Der AI-5 ist der vielseitigste Cobot, der Branchenstandards setzt. Durch die optimale Balance zwischen Nutzlast und Reichweite maximiert er die Produktivität in fast allen Fertigungsprozessen.",
         ai10_long_desc: "Der AI-10 bietet kraftvolle Hubleistung und den besten Arbeitsradius seiner Klasse. Optimiert für schwere Palettierung und Schweißarbeiten, sprengt er die physischen Grenzen Ihrer Produktion.",
         desc_title: "Detaillierte Beschreibung", spec_title: "Technische Daten", spec_weight: "Gewicht", spec_dof: "Freiheitsgrade",
-        close: "Schließen"
+        close: "Schließen",
+        // News Tags
+        tag_update: "UPDATE", tag_event: "EVENT", tag_guide: "GUIDE",
+        tag_tech: "TECH", tag_case: "FALLBEISPIEL", tag_software: "SOFTWARE", tag_info: "INFO",
+        // News Full Content (Community)
+        news4_title: "Ankündigung des Hochpräzisions-Aktuators RA-X1",
+        news4_desc: "Neue Technologie mit mehr als der doppelten Präzision bestehender Modelle.",
+        news5_title: "Erfolgsfall AI-5 in der Halbleiterverpackungslinie",
+        news5_desc: "Reduzierung der Fehlerquote um 15 % durch ESD-geschützte AI-5-Modelle.",
+        news6_title: "RoboOS 2.1 Update: Pfadoptimierungsalgorithmus",
+        news6_desc: "Reduzierung der Zykluszeiten um durchschnittlich 10 % durch neue KI-Updates.",
+        news7_title: "Offizieller Start des RaaS-Abonnementmodells für Cobots",
+        news7_desc: "Abomodell mit deutlich geringeren Initialkosten. Jetzt beraten lassen.",
+        news1_full: "Der Algorithmus 'NightWatch v2' wurde offiziell veröffentlicht.\n\nVerbessert die Erkennung bei schlechten Lichtverhältnissen drastisch. Tests bestätigten eine 30%ige Steigerung der Nachtpräzision.",
+        news2_full: "AI-ROBO präsentierte auf der '2026 Global Robotics Expo' in München führende Cobot-Lösungen.\n\nWir demonstrierten unser KI-Sicherheitssystem, das die Zusammenarbeit von Mensch und Roboter ohne Zäune ermöglicht.",
+        news3_full: "Sicherheit steht an erster Stelle. Prüfen Sie unseren Sicherheitsleitfaden.\n\n[Checkliste]\n1. Not-Aus-Zonen\n2. Totwinkel von KI-Sensoren\n3. Kollisionsenergieberechnung\nKonform mit ISO 10218-1 und ISO/TS 15066.",
+        news4_full: "Das Hardware-Team präsentiert den RA-X1 Aktuator nach 3 Jahren Forschung.\n\nKombiniert ein ultrapräzises Getriebe mit einem BLDC-Hochleistungsmotor. Optimiert für die Halbleitermontage.",
+        news5_full: "Projekt mit S-Electronics: 12 AI-5 Modelle steigerten die Produktion um 22% und senkten Fehler um 15%. Das ESD-Design war in der Halbleiterumgebung entscheidend.",
+        news6_full: "RoboOS 2.1 ist live. Das Herzstück ist der 'Intelligente Pfadverkürzungsalgorithmus', der unnötige Bewegungen minimiert und die Effizienz um 10-12% steigert.",
+        news7_full: "RaaS-Abonnementservice für KMU. Nutzen Sie modernste KI-Cobots gegen eine monatliche Gebühr. Wartung und Updates sind inklusive."
     }
 };
 
@@ -860,4 +1010,85 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('productModal');
         modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
     };
+
+    // 6. 히어로 이미지 슬라이더 로직
+    const initHeroSlider = () => {
+        const slider = document.querySelector('.hero-image-slider');
+        if (!slider) return;
+
+        const slides = slider.querySelectorAll('.slide');
+        const dots = slider.querySelectorAll('.dot');
+        const prevBtn = slider.querySelector('.prev-btn');
+        const nextBtn = slider.querySelector('.next-btn');
+        if (!slides.length) return;
+
+        let currentIdx = 0;
+        let slideInterval;
+
+        const showSlide = (n) => {
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            currentIdx = (n + slides.length) % slides.length;
+            slides[currentIdx].classList.add('active');
+            if (dots[currentIdx]) dots[currentIdx].classList.add('active');
+        };
+
+        const nextSlide = () => showSlide(currentIdx + 1);
+        const prevSlide = () => showSlide(currentIdx - 1);
+
+        if (nextBtn) nextBtn.onclick = (e) => { e.stopPropagation(); nextSlide(); resetInterval(); };
+        if (prevBtn) prevBtn.onclick = (e) => { e.stopPropagation(); prevSlide(); resetInterval(); };
+
+        dots.forEach((dot, i) => {
+            dot.onclick = (e) => { e.stopPropagation(); showSlide(i); resetInterval(); };
+        });
+
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000); // 5초마다 전환
+        };
+
+        // 7. 라이트박스 (이미지 크게 보기) 추가
+        slides.forEach(slide => {
+            slide.style.cursor = 'zoom-in';
+            slide.onclick = () => {
+                const src = slide.getAttribute('src');
+                const lightboxHTML = `
+                    <div class="lightbox-overlay" id="lightbox" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:5000; display:flex; align-items:center; justify-content:center; cursor:zoom-out; opacity:0; transition:opacity 0.3s ease;">
+                        <img src="${src}" style="max-width:90%; max-height:85%; border-radius:15px; box-shadow:0 0 60px rgba(0,0,0,0.8); transform:scale(0.9); transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <span style="position:absolute; top:30px; right:40px; color:white; font-size:40px; font-weight:300; cursor:pointer;">&times;</span>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+                const lightbox = document.getElementById('lightbox');
+                const img = lightbox.querySelector('img');
+                
+                requestAnimationFrame(() => {
+                    lightbox.style.opacity = '1';
+                    img.style.transform = 'scale(1)';
+                });
+
+                const closeLightbox = () => {
+                    lightbox.style.opacity = '0';
+                    img.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        lightbox.remove();
+                        document.removeEventListener('keydown', escHandler);
+                    }, 300);
+                };
+
+                const escHandler = (e) => {
+                    if (e.key === 'Escape') closeLightbox();
+                };
+
+                lightbox.onclick = closeLightbox;
+                document.addEventListener('keydown', escHandler);
+            };
+        });
+
+        resetInterval();
+    };
+
+    initHeroSlider();
 });

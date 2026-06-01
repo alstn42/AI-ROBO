@@ -40,7 +40,7 @@
                             <h3 style="margin-bottom: 10px;" data-i18n="guide1_title">하드웨어 설치 가이드</h3>
                             <p style="color: #64748b;" data-i18n="guide1_desc">로봇 베이스 설치부터 전원 공급, 기구적 연결 방법을 단계별로 안내합니다.</p>
                         </div>
-                        <button class="btn" style="white-space: nowrap; border: 1px solid var(--border);">Download PDF</button>
+                        <button class="btn" style="white-space: nowrap; border: 1px solid var(--border);" data-i18n="btn_download_pdf" onclick="handleDownload()">Download PDF</button>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                             <h3 style="margin-bottom: 10px;" data-i18n="guide2_title">AI 비전 세팅 방법론</h3>
                             <p style="color: #64748b;" data-i18n="guide2_desc">작업 공간 학습 및 객체 인식을 위한 소프트웨어 초기 보정 가이드입니다.</p>
                         </div>
-                        <button class="btn" style="white-space: nowrap; border: 1px solid var(--border);">Step-by-Step</button>
+                        <button class="btn" style="white-space: nowrap; border: 1px solid var(--border);" data-i18n="btn_step_by_step" onclick="openGuideModal('guide2')">Step-by-Step</button>
                     </div>
                 </div>
 
@@ -62,10 +62,20 @@
                             <h3 style="margin-bottom: 10px;" data-i18n="guide3_title">안전 프로토콜 및 유지보수</h3>
                             <p style="color: #64748b;" data-i18n="guide3_desc">정기 점검 리스트와 비상 정지 시스템 확인 절차를 포함합니다.</p>
                         </div>
-                        <button class="btn" style="white-space: nowrap; border: 1px solid var(--border);">Read Online</button>
+                        <button class="btn" style="white-space: nowrap; border: 1px solid var(--border);" data-i18n="btn_read_online" onclick="openGuideModal('guide3')">Read Online</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- 가이드 상세 모달 -->
+    <div id="guide-modal" class="modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(8px);">
+        <div class="modal-content" style="background: white; width: 90%; max-width: 800px; border-radius: 24px; padding: 50px; position: relative; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);">
+            <button onclick="closeGuideModal()" style="position: absolute; top: 20px; right: 25px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #94a3b8;">&times;</button>
+            <div id="modal-badge" style="display: inline-block; padding: 6px 16px; background: #f1f5f9; color: var(--primary); border-radius: 20px; font-size: 0.9rem; font-weight: 700; margin-bottom: 20px;">TECHNICAL GUIDE</div>
+            <h2 id="modal-guide-title" style="font-size: 2.2rem; margin-bottom: 25px; line-height: 1.3;"></h2>
+            <div id="modal-guide-content" style="line-height: 1.8; font-size: 1.15rem; color: #334155; white-space: pre-wrap; border-top: 1px solid #f1f5f9; padding-top: 25px;"></div>
         </div>
     </div>
 
@@ -99,5 +109,63 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script>
+        function openGuideModal(guideId) {
+            const modal = document.getElementById('guide-modal');
+            const titleEl = document.getElementById('modal-guide-title');
+            const contentEl = document.getElementById('modal-guide-content');
+            
+            const lang = localStorage.getItem('robo_lang') || 'ko';
+            const t = translations[lang];
+
+            if (t && t[`${guideId}_full`]) {
+                titleEl.textContent = t[`${guideId}_title`];
+                contentEl.innerText = t[`${guideId}_full`];
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeGuideModal() {
+            document.getElementById('guide-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleDownload() {
+            // 현재 저장된 언어 값을 가져옴
+            const storedLang = localStorage.getItem('robo_lang') || 'ko';
+            const lang = storedLang.trim().toLowerCase();
+            
+            const messages = {
+                ko: `[한국어] 가이드 문서를 새 창에서 엽니다. (파일: AI-ROBO_Hardware_Guide_KO.pdf)`,
+                en: `[English] Opening guide in a new tab. (File: AI-ROBO_Hardware_Guide_EN.pdf)`,
+                ja: `[日本語] 新しいタブでガイドを開きます。`,
+                zh: `[简体中文] 在新选项卡中打开指南...`,
+                es: `[Español] Abriendo la guía en una nueva pestaña...`,
+                de: `[Deutsch] Leitfaden in einem neuen Tab öffnen...`
+            };
+            
+            let fileName = 'AI-ROBO_Hardware_Guide_EN.pdf';
+            if (lang === 'ko') {
+                fileName = 'AI-ROBO_Hardware_Guide_KO.pdf';
+            }
+            
+            const filePath = `docs/${fileName}`;
+            
+            // 알림 표시 (디버깅 지원을 위해 언어 정보 포함)
+            alert(messages[lang] || messages['en']);
+            
+            // 새 창/탭에서 열기
+            window.open(filePath, '_blank');
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('guide-modal');
+            if (event.target == modal) {
+                closeGuideModal();
+            }
+        }
+    </script>
 </body>
 </html>

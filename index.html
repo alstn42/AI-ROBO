@@ -39,7 +39,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="container" style="display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 50px;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 60px;">
                 <div class="hero-content">
                     <h1 data-i18n="hero_title">미래를 움직이는<br>AI 로봇 솔루션</h1>
                     <p data-i18n="hero_desc">AI-ROBO는 산업 자동화의 새로운 기준을 제시합니다. 더 똑똑하고 안전한 협동 로봇으로 생산성을 혁신하세요.</p>
@@ -49,7 +49,20 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="images/hero.png" alt="AI 협동로봇 히어로 이미지" style="border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.3);">
+                    <div class="hero-image-slider">
+                        <div class="slider-track">
+                            <img src="images/hero.png" class="slide active" alt="AI Robo Solution Overview">
+                            <img src="images/hero2.png" class="slide" alt="Precise Robotic Assembly">
+                            <img src="images/hero3.png" class="slide" alt="Automated Factory Floor">
+                        </div>
+                        <button class="slider-ctrl prev-btn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-ctrl next-btn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
