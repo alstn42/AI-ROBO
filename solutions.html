@@ -31,33 +31,121 @@
         </div>
     </header>
 
-    <div style="padding: 150px 0 100px; text-align: center;">
+    <div style="padding: 120px 0 100px;">
         <div class="container">
-            <h1 data-i18n="sol_title">산업별 맞춤형 솔루션</h1>
-            <p style="margin-top: 20px; color: #64748b;" data-i18n="sol_desc">AI-ROBO는 다양한 현장의 문제를 해결합니다.</p>
+            <div style="text-align: center; margin-bottom: 80px;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;" data-i18n="sol_title">산업별 맞춤형 솔루션</h1>
+                <p style="font-size: 1.25rem; color: #64748b; max-width: 700px; margin: 0 auto;" data-i18n="sol_desc">AI-ROBO는 최첨단 인공지능 기술로 각 현장의 복잡한 도전을 해결합니다.</p>
+            </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; margin-top: 80px; text-align: left;">
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;"><i class="fas fa-car"></i> <span data-i18n="sol1_title">자동차 산업</span></h3>
-                    <p data-i18n="sol1_desc">정밀한 볼트 체결, 실링 도포, 부품 검사 등 복잡한 공정을 AI 비전 기술로 자동화합니다.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 40px;">
+                <!-- Automotive -->
+                <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; border-radius: 24px;">
+                    <div style="height: 250px; overflow: hidden;">
+                        <img src="images/sol_auto.png" alt="Automotive Solution" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 50px; height: 50px; background: #eff6ff; color: #3b82f6; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin: 0;" data-i18n="sol1_title">자동차 산업</h3>
+                        </div>
+                        <p style="color: #475569; margin-bottom: 25px; line-height: 1.7;" data-i18n="sol1_desc">정밀한 볼트 체결, 실링 도포, 부품 검사 등 복잡한 공정을 AI 비전 기술로 자동화합니다.</p>
+                        <div style="background: #f8fafc; padding: 20px; border-radius: 16px; margin-bottom: 30px; border-left: 4px solid #3b82f6;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: #3b82f6; text-transform: uppercase;" data-i18n="sol_effect_label">핵심 성과</span>
+                            <p style="margin-top: 5px; font-weight: 600; color: #1e293b;" data-i18n="sol1_effect">생산성 25% 향상 및 불량률 18% 감소</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;" onclick="showSolutionDetail('sol1')" data-i18n="detail_btn">상세 정보 보기</button>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;"><i class="fas fa-microchip"></i> <span data-i18n="sol2_title">전자/반도체</span></h3>
-                    <p data-i18n="sol2_desc">ESD 보호 기능을 갖춘 로봇으로 민감한 전자 부품의 핸들링과 PCB 검사를 수행합니다.</p>
+
+                <!-- Electronics -->
+                <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; border-radius: 24px;">
+                    <div style="height: 250px; overflow: hidden;">
+                        <img src="images/sol_elec.png" alt="Electronics Solution" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 50px; height: 50px; background: #fff1f2; color: #e11d48; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin: 0;" data-i18n="sol2_title">전자/반도체</h3>
+                        </div>
+                        <p style="color: #475569; margin-bottom: 25px; line-height: 1.7;" data-i18n="sol2_desc">ESD 보호 기능을 갖춘 로봇으로 민감한 전자 부품의 핸들링과 PCB 검사를 수행합니다.</p>
+                        <div style="background: #f8fafc; padding: 20px; border-radius: 16px; margin-bottom: 30px; border-left: 4px solid #e11d48;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: #e11d48; text-transform: uppercase;" data-i18n="sol_effect_label">핵심 성과</span>
+                            <p style="margin-top: 5px; font-weight: 600; color: #1e293b;" data-i18n="sol2_effect">작업 정밀도 200% 개선 및 24시간 가동</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;" onclick="showSolutionDetail('sol2')" data-i18n="detail_btn">상세 정보 보기</button>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;"><i class="fas fa-box-open"></i> <span data-i18n="sol3_title">물류/팔레타이징</span></h3>
-                    <p data-i18n="sol3_desc">다양한 크기의 박스를 인식하고 최적의 경로로 적재하는 AI 알고리즘을 제공합니다.</p>
+
+                <!-- Logistics -->
+                <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; border-radius: 24px;">
+                    <div style="height: 250px; overflow: hidden;">
+                        <img src="images/sol_logi.png" alt="Logistics Solution" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 50px; height: 50px; background: #f0fdf4; color: #16a34a; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin: 0;" data-i18n="sol3_title">물류/팔레타이징</h3>
+                        </div>
+                        <p style="color: #475569; margin-bottom: 25px; line-height: 1.7;" data-i18n="sol3_desc">다양한 크기의 박스를 인식하고 최적의 경로로 적재하는 AI 알고리즘을 제공합니다.</p>
+                        <div style="background: #f8fafc; padding: 20px; border-radius: 16px; margin-bottom: 30px; border-left: 4px solid #16a34a;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: #16a34a; text-transform: uppercase;" data-i18n="sol_effect_label">핵심 성과</span>
+                            <p style="margin-top: 5px; font-weight: 600; color: #1e293b;" data-i18n="sol3_effect">적재 효율 30% 증대 및 인건비 45% 절감</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;" onclick="showSolutionDetail('sol3')" data-i18n="detail_btn">상세 정보 보기</button>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3 style="margin-bottom: 20px;"><i class="fas fa-flask"></i> <span data-i18n="sol4_title">의료/실험실</span></h3>
-                    <p data-i18n="sol4_desc">정확한 용량 취급과 반복적인 테스트 공정을 24시간 오차 없이 수행합니다.</p>
+
+                <!-- Medical -->
+                <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; border-radius: 24px;">
+                    <div style="height: 250px; overflow: hidden;">
+                        <img src="images/sol_medi.png" alt="Medical Solution" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                            <div style="width: 50px; height: 50px; background: #faf5ff; color: #9333ea; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin: 0;" data-i18n="sol4_title">의료/실험실</h3>
+                        </div>
+                        <p style="color: #475569; margin-bottom: 25px; line-height: 1.7;" data-i18n="sol4_desc">정확한 용량 취급과 반복적인 테스트 공정을 24시간 오차 없이 수행합니다.</p>
+                        <div style="background: #f8fafc; padding: 20px; border-radius: 16px; margin-bottom: 30px; border-left: 4px solid #9333ea;">
+                            <span style="font-size: 0.85rem; font-weight: 700; color: #9333ea; text-transform: uppercase;" data-i18n="sol_effect_label">핵심 성과</span>
+                            <p style="margin-top: 5px; font-weight: 600; color: #1e293b;" data-i18n="sol4_effect">오차율 0% 목표 및 안전한 시약 취급</p>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;" onclick="showSolutionDetail('sol4')" data-i18n="detail_btn">상세 정보 보기</button>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div style="margin-top: 100px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); padding: 80px; border-radius: 32px; text-align: center; color: white;">
+                <h2 style="font-size: 2.5rem; color: white; margin-bottom: 20px;" data-i18n="sol_cta_title">현장에 딱 맞는 맞춤형 솔루션이 필요하신가요?</h2>
+                <p style="font-size: 1.15rem; opacity: 0.9; margin-bottom: 40px;" data-i18n="sol_cta_desc">AI-ROBO의 기술진이 귀하의 비즈니스 현장을 직접 분석하고 최적의 자동화 시나리오를 제안해 드립니다.</p>
+                <button class="btn" style="background: white; color: var(--primary); padding: 18px 45px; font-size: 1.1rem; font-weight: 800;" onclick="location.href='community.html#qna'" data-i18n="consult">전문가 상담 신청하기</button>
             </div>
         </div>
     </div>
 
-    <footer>
+    <!-- 가이드 상세 모달 (솔루션용으로 재활용) -->
+    <div id="solution-modal" class="modal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 2000; backdrop-filter: blur(8px);">
+        <div class="modal-content" style="background: white; width: 95%; max-width: 900px; border-radius: 28px; padding: 60px; position: relative; max-height: 94vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(0,0,0,0.3);">
+            <button onclick="closeSolutionModal()" style="position: absolute; top: 20px; right: 25px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #94a3b8;">&times;</button>
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px;">
+                <div id="modal-sol-icon" style="width: 60px; height: 60px; background: #eff6ff; color: #3b82f6; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;"></div>
+                <h2 id="modal-sol-title" style="font-size: 2.2rem; margin: 0; line-height: 1.3;"></h2>
+            </div>
+            <div id="modal-sol-content" style="line-height: 1.9; font-size: 1.2rem; color: #334155; border-top: 1px solid #f1f5f9; padding-top: 30px;"></div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 0;">
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -86,6 +174,61 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script>
+        function showSolutionDetail(solId) {
+            const modal = document.getElementById('solution-modal');
+            const titleEl = document.getElementById('modal-sol-title');
+            const contentEl = document.getElementById('modal-sol-content');
+            const iconEl = document.getElementById('modal-sol-icon');
+            
+            const lang = localStorage.getItem('robo_lang') || 'ko';
+            const t = translations[lang];
+
+            const icons = {
+                'sol1': '<i class="fas fa-car"></i>',
+                'sol2': '<i class="fas fa-microchip"></i>',
+                'sol3': '<i class="fas fa-box-open"></i>',
+                'sol4': '<i class="fas fa-flask"></i>'
+            };
+
+            const colors = {
+                'sol1': '#3b82f6',
+                'sol2': '#e11d48',
+                'sol3': '#16a34a',
+                'sol4': '#9333ea'
+            };
+
+            if (t && t[`${solId}_full`]) {
+                titleEl.textContent = t[`${solId}_title`];
+                contentEl.innerHTML = `
+                    <div style="margin-bottom: 30px; padding: 25px; background: #f8fafc; border-radius: 16px; border-left: 5px solid ${colors[solId]}">
+                        <strong style="color: ${colors[solId]}; display: block; margin-bottom: 10px; font-size: 0.9rem;">${t.sol_effect_label}</strong>
+                        <span style="font-weight: 700; color: #1e293b; font-size: 1.1rem;">${t[`${solId}_effect`]}</span>
+                    </div>
+                    ${t[`${solId}_full`]}
+                `;
+                iconEl.innerHTML = icons[solId];
+                iconEl.style.color = colors[solId];
+                iconEl.style.background = colors[solId] + '15'; // 옅은 배경색
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeSolutionModal() {
+            document.getElementById('solution-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('solution-modal');
+            if (event.target == modal) {
+                closeSolutionModal();
+            }
+        }
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
