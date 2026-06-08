@@ -10,7 +10,10 @@
 <body>
     <header>
         <div class="container nav">
-            <a href="index.html" class="logo">AI-<span>ROBO</span></a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="AI-ROBO Logo" style="height: 48px; width: auto; margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">
+                AI-<span>ROBO</span>
+            </a>
             <div class="nav-links">
                 <a href="index.html" data-i18n="home">홈</a>
                 <a href="products.html" data-i18n="products">제품정보</a>
@@ -99,8 +102,8 @@
                 </div>
                 <div>
                     <h4 style="color: white; margin-bottom: 25px;" data-i18n="connect">Connect</h4>
-                    <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> contact@ai-robo.com</p>
-                    <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 02-1234-5678</p>
+                    <p style="opacity: 0.7; margin-bottom: 15px;"><i class="fas fa-envelope"></i> alstn42@dongyang.ac.kr</p>
+                    <p style="opacity: 0.7;"><i class="fas fa-phone"></i> 010-8390-0542</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -133,31 +136,22 @@
         }
 
         function handleDownload() {
-            // 현재 저장된 언어 값을 가져옴
-            const storedLang = localStorage.getItem('robo_lang') || 'ko';
-            const lang = storedLang.trim().toLowerCase();
+            const lang = localStorage.getItem('robo_lang') || 'ko';
+            let fileName = 'AI-ROBO_guide_ko.pdf'; // 기본 한국어
             
-            const messages = {
-                ko: `[한국어] 가이드 문서를 새 창에서 엽니다. (파일: AI-ROBO_Hardware_Guide_KO.pdf)`,
-                en: `[English] Opening guide in a new tab. (File: AI-ROBO_Hardware_Guide_EN.pdf)`,
-                ja: `[日本語] 新しいタブでガイドを開きます。`,
-                zh: `[简体中文] 在新选项卡中打开指南...`,
-                es: `[Español] Abriendo la guía en una nueva pestaña...`,
-                de: `[Deutsch] Leitfaden in einem neuen Tab öffnen...`
+            // 언어별 파일 매핑
+            const fileMap = {
+                'ko': 'AI-ROBO_guide_ko.pdf',
+                'en': 'AI-ROBO_Hardware_Guide_EN.pdf',
+                'ja': 'AI-ROBO_Hardware_Guide_JA.pdf',
+                'zh': 'AI-ROBO_Hardware_Guide_ZH.pdf',
+                'es': 'AI-ROBO_Hardware_Guide_ES.pdf',
+                'de': 'AI-ROBO_Hardware_Guide_DE.pdf'
             };
             
-            let fileName = 'AI-ROBO_Hardware_Guide_EN.pdf';
-            if (lang === 'ko') {
-                fileName = 'AI-ROBO_Hardware_Guide_KO.pdf';
-            }
+            fileName = fileMap[lang] || fileMap['en'];
             
-            const filePath = `docs/${fileName}`;
-            
-            // 알림 표시 (디버깅 지원을 위해 언어 정보 포함)
-            alert(messages[lang] || messages['en']);
-            
-            // 새 창/탭에서 열기
-            window.open(filePath, '_blank');
+            window.open(fileName, '_blank');
         }
 
         window.onclick = function(event) {

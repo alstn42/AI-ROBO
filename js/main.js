@@ -10,11 +10,11 @@ const translations = {
         consult: "문의하기",
         hero_title: "미래를 움직이는<br>AI 로봇 솔루션",
         hero_desc: "AI-ROBO는 산업 자동화의 새로운 기준을 제시합니다. 더 똑똑하고 안전한 협동 로봇으로 생산성을 혁신하세요.",
+        hero_btn_product: "제품 알아보기",
+        hero_btn_guide: "제품 가이드",
         quick_links: "Quick Links",
         connect: "Connect",
         footer_desc: "산업 자동화의 혁신을 이끄는 AI 협동로봇 솔루션 전문 기업입니다.",
-        hero_btn_product: "제품 알아보기",
-        hero_btn_video: "영상 보기",
         stat_partners: "글로벌 파트너사",
         stat_prod: "생산성 향상",
         stat_accident: "사고 발생률",
@@ -42,8 +42,34 @@ const translations = {
         sol4_title: "의료/실험실",
         sol4_desc: "정확한 용량 취급과 반복적인 테스트 공정을 24시간 오차 없이 수행합니다.",
         guide_title: "기술 문서 및 설치 가이드",
+        btn_view_guide: "가이드 보기",
         guide1_title: "하드웨어 설치 가이드",
         guide1_desc: "로봇 베이스 설치부터 전원 공급, 기구적 연결 방법을 단계별로 안내합니다.",
+        guide1_full: `[1. 하드웨어 솔루션 개요]
+AI-ROBO 스마트 협동 로봇은 인간과 로봇의 안전한 공존을 위해 설계되었습니다. 시스템의 초기 물리적 고정과 전원 계통 연결이 완벽하게 이루어져야 합니다.
+
+[2. 필수 요구 인프라]
+• 설치 표면: 경사도 0.3° 이하, 진동이 없는 스틸 프레임 또는 콘크리트 바닥 (최상 중요도)
+• 입력 전원: AC 200V ~ 240V, 50/60Hz (단상), 전압 변동률 ±10% 이내
+• 접지 시스템: 제3종 접지 (접지 저항 100Ω 이하 단독 접지 권장)
+
+[3. 1단계: 로봇 베이스(Base) 기구부 고정]
+• 포지셔닝: 로봇의 최대 가동 반경 내에 물리적 간섭이 없는지 레이아웃을 검토합니다.
+• 수평도 보정: 디지털 수평계를 사용하여 설치면의 수평 상태를 0.3° 이내로 조정합니다.
+• 볼트 체결: 고장력 육각 볼트에 Loctite 243을 도포한 후, 대각선 방향 순서로 지정된 토크까지 점진적으로 조여줍니다.
+
+[4. 2단계: 전원 인프라 및 신호 케이블 인터페이스]
+• 제어기 결선: 반드시 전용 누전 차단기(ELB)를 거쳐 배선되도록 설계하십시오.
+• 노이즈 방지: 전원선과 통신선은 최소 10cm 이상의 이격을 두어 배치합니다.
+• 커넥터 결합: 헤비듀티 커넥터 연결 시 핀이 휘어지지 않도록 수직으로 완전히 밀어 넣고 이중 잠금 레버를 고정합니다.
+
+[5. 3단계: 엔드 이펙터(End-Effector) 및 라인 드레스 가이드]
+• 배선 방법: 툴에 연결되는 전기선과 에어 호스가 관절 회전 시 비틀리지 않도록 최대 가동 영역 테스트를 진행한 후 가이드 클램프로 고정합니다.
+
+[6. 종합 하드웨어 검증 리스트]
+✔ 베이스 고정 볼트 규정 토크 체결 여부
+✔ 공급 전압 범위 및 제3종 접지 완료 여부
+✔ 커넥터 레버 잠금 상태 및 주변 구조물 간섭 여부`,
         guide2_title: "AI 비전 세팅 방법론",
         guide2_desc: "작업 공간 학습 및 객체 인식을 위한 소프트웨어 초기 보정 가이드입니다.",
         guide3_title: "안전 프로토콜 및 유지보수",
@@ -51,7 +77,6 @@ const translations = {
         btn_download_pdf: "Download PDF",
         btn_step_by_step: "Step-by-Step",
         btn_read_online: "Read Online",
-        guide1_full: "본 가이드는 AI-ROBO 하드웨어의 안전한 설치를 위한 지침서입니다.\n\n[주요 설치 단계]\n1. 로봇 베이스 고정: M8 볼트를 사용하여 15mm 이상의 강철 지지대에 고정\n2. 전원 연결: 220V 단상 전원을 컨트롤 박스에 연결\n3. 하중 설정: 제품 사양에 맞는 Tool Weight 설정\n4. 초기 기동: 비상 정지 버튼 해제 후 캘리브레이션 모드 진입",
         guide2_full: "AI 비전 알고리즘의 정확도를 극대화하기 위한 보정 가이드입니다.\n\n[세팅 절차]\n1. 조명 설정: 작업 영역에 500 Lux 이상의 균일한 조도 확보\n2. 체커보드 인식: 제공된 캘리브레이션판을 4가지 각도에서 인식\n3. ROI 설정: 로봇의 유효 작업 영역 내 관심 구역을 드래그하여 지정\n4. 딥러닝 학습: 인공지능이 부품을 인식하도록 100장 이상의 이미지 데이터 수집",
         guide3_full: "안전한 작업 환경을 유지하기 위한 필수 프로토콜입니다.\n\n[유지보수 리스트]\n- 주간 점검: 관절 소음 및 볼트 풀림 여부 확인\n- 월간 점검: 컨트롤 박스 필터 청소 및 팬 작동 확인\n- 분기 점검: 케이블 피복 마모 상태 정밀 검사\n\n[안전 수칙]\n- 로봇 가동 중 반경 내 절대 진입 금지\n- 비상 정지 시스템은 매 정가 기동 전 테스트 필수",
         comm_desc: "기술 소식과 전문 상담을 한 곳에서 확인하세요.",
@@ -73,6 +98,14 @@ const translations = {
         form_content: "내용",
         form_title_ph: "제목을 입력하세요",
         form_content_ph: "자세한 문의 내용을 입력해 주세요",
+        form_type: "문의 유형",
+        type_purchase: "구매 문의",
+        type_refund: "환불 문의",
+        type_as: "AS 문의",
+        type_tech: "기술 지원",
+        type_other: "기타",
+        qna_success: "<i class='fas fa-check-circle'></i> 문의가 성공적으로 전송되었습니다. 곧 연락드리겠습니다!",
+        qna_error: "<i class='fas fa-exclamation-circle'></i> 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
         board_write: "문의 등록하기",
         board_search_ph: "관심 있는 주제를 검색해 보세요",
         new_post_btn: "새로운 글 작성",
@@ -147,7 +180,6 @@ const translations = {
         connect: "Connect",
         footer_desc: "A leading provider of collaborative robot solutions, driving innovation in industrial automation.",
         hero_btn_product: "Learn More",
-        hero_btn_video: "Watch Video",
         stat_partners: "Global Partners",
         stat_prod: "Productivity Up",
         stat_accident: "Accident Rate",
@@ -175,8 +207,34 @@ const translations = {
         sol4_title: "Medical/Laboratory",
         sol4_desc: "Perform accurate volume handling and repetitive test processes 24 hours a day without error.",
         guide_title: "Technical Documents & Setup Guides",
+        btn_view_guide: "View Guide",
         guide1_title: "Hardware Installation Guide",
-        guide1_desc: "Step-by-step guidance on robot base installation, power supply, and connection.",
+        guide1_desc: "Step-by-step instructions from robot base installation to power supply and mechanical connections.",
+        guide1_full: `[1. Hardware Solution Overview]
+AI-ROBO smart collaborative robots are designed for safe coexistence between humans and robots. Physical fixing and power system connections must be perfectly implemented.
+
+[2. Infrastructure Requirements]
+• Surface Flatness: Gradient < 0.3°, vibration-free steel frame or concrete floor (Critical)
+• Input Power: AC 200V ~ 240V, 50/60Hz (Single-phase), voltage fluctuation within ±10%
+• Grounding: Type 3 grounding (Independent grounding < 100Ω recommended)
+
+[3. Phase 1: Securing the Robot Base]
+• Positioning: Review layout to ensure no physical interferences within the max workspace.
+• Leveling: Use a digital level to adjust the installation surface within 0.3°.
+• Fastening: Apply Loctite 243 to high-strength bolts and tighten in a diagonal pattern to the specified torque.
+
+[4. Phase 2: Power & Signal Interface]
+• Controller Wiring: Must be designed with a dedicated Earth Leakage Breaker (ELB).
+• Noise Prevention: Maintain at least 10cm separation between power and communication lines.
+• Connector Coupling: Push heavy-duty connectors vertically to avoid pin damage and secure double-locking levers.
+
+[5. Phase 3: End-Effector & Dresspack Guide]
+• Wiring: Conduct a 'max range test' to ensure wires/hoses don't twist during rotation, then secure with guide clamps.
+
+[6. Hardware Validation Checklist]
+✔ Base bolts tightened to specified torque
+✔ Supply voltage and Type 3 grounding verified
+✔ Connectors locked and zero interference with surrounding structures`,
         guide2_title: "AI Vision Setup Methodology",
         guide2_desc: "Initial software calibration guide for workspace learning and object recognition.",
         guide3_title: "Safety Protocols & Maintenance",
@@ -206,6 +264,14 @@ const translations = {
         form_content: "Message",
         form_title_ph: "Enter subject",
         form_content_ph: "Enter your message in detail",
+        form_type: "Inquiry Type",
+        type_purchase: "Purchase Inquiry",
+        type_refund: "Refund Inquiry",
+        type_as: "Repair & Support (A/S)",
+        type_tech: "Technical Support",
+        type_other: "Other",
+        qna_success: "<i class='fas fa-check-circle'></i> Inquiry sent successfully. We will contact you soon!",
+        qna_error: "<i class='fas fa-exclamation-circle'></i> An error occurred. Please try again later.",
         board_write: "Submit Inquiry",
         board_search_ph: "Search for topics of interest",
         new_post_btn: "Write New Post",
@@ -280,8 +346,8 @@ const translations = {
         quick_links: "クイックリンク",
         connect: "接続",
         footer_desc: "産業自動化の革新をリードするAI協働ロボットソリューションの専門企業です。",
-        hero_btn_product: "製品の詳細",
-        hero_btn_video: "動画を見る",
+        hero_btn_product: "製品を知る",
+        hero_btn_guide: "製品ガイド",
         stat_partners: "グローバルパートナー",
         stat_prod: "生産性の向上",
         stat_accident: "事故発生率",
@@ -338,6 +404,14 @@ const translations = {
         form_content: "内容",
         form_title_ph: "タイトルを入力してください",
         form_content_ph: "詳細な問い合わせ内容を入力してください",
+        form_type: "お問い合わせの種類",
+        type_purchase: "購入のお問い合わせ",
+        type_refund: "払い戻しのお問い合わせ",
+        type_as: "アフターサービス (A/S)",
+        type_tech: "技術サポート",
+        type_other: "その他",
+        qna_success: "<i class='fas fa-check-circle'></i> お問い合わせが正常に送信されました。すぐにご連絡いたします！",
+        qna_error: "<i class='fas fa-exclamation-circle'></i> エラーが発生しました。しばらくしてからもう一度お試しください。",
         board_write: "問い合わせを登録する",
         board_search_ph: "興味のあるトピックを検索",
         new_post_btn: "新しい記事を作成",
@@ -411,8 +485,8 @@ const translations = {
         quick_links: "快速链接",
         connect: "联系我们",
         footer_desc: "作为工业自动化创新的领导者，我们是一家专门提供AI协作机器人解决方案的企业。",
-        hero_btn_product: "查看产品",
-        hero_btn_video: "观看视频",
+        hero_btn_product: "了解产品",
+        hero_btn_guide: "产品指南",
         stat_partners: "全球合作伙伴",
         stat_prod: "生产力提升",
         stat_accident: "事故发生率",
@@ -469,6 +543,14 @@ const translations = {
         form_content: "内容",
         form_title_ph: "请输入标题",
         form_content_ph: "请输入详细咨询内容",
+        form_type: "咨询类型",
+        type_purchase: "购买咨询",
+        type_refund: "退款咨询",
+        type_as: "售后服务 (A/S)",
+        type_tech: "技术支持",
+        type_other: "其他",
+        qna_success: "<i class='fas fa-check-circle'></i> 咨询已成功发送。我们将尽快与您联系！",
+        qna_error: "<i class='fas fa-exclamation-circle'></i> 发生错误。请稍后再试。",
         board_write: "提交咨询",
         board_search_ph: "搜索感兴趣的主题",
         new_post_btn: "撰写新文章",
@@ -542,8 +624,8 @@ const translations = {
         quick_links: "Enlaces Rápidos",
         connect: "Conectar",
         footer_desc: "Líder en innovación de automatización industrial, somos una empresa especializada en soluciones de robots colaborativos AI.",
-        hero_btn_product: "Ver Productos",
-        hero_btn_video: "Ver Video",
+        hero_btn_product: "Explorar productos",
+        hero_btn_guide: "Guía de productos",
         stat_partners: "Socios Globales",
         stat_prod: "Aumento de Productividad",
         stat_accident: "Tasa de Accidentes",
@@ -600,6 +682,14 @@ const translations = {
         form_content: "Mensaje",
         form_title_ph: "Ingrese el asunto",
         form_content_ph: "Ingrese los detalles de su consulta",
+        form_type: "Tipo de consulta",
+        type_purchase: "Consulta de compra",
+        type_refund: "Consulta de reembolso",
+        type_as: "Servicio técnico (A/S)",
+        type_tech: "Soporte técnico",
+        type_other: "Otros",
+        qna_success: "<i class='fas fa-check-circle'></i> ¡Consulta enviada con éxito! Nos pondremos en contacto pronto.",
+        qna_error: "<i class='fas fa-exclamation-circle'></i> Ocurrió un error. Por favor, inténtelo de nuevo más tarde.",
         board_write: "Enviar Consulta",
         board_search_ph: "Busca temas de interés",
         new_post_btn: "Escribir nueva publicación",
@@ -673,8 +763,8 @@ const translations = {
         quick_links: "Schnelle Links",
         connect: "Verbinden",
         footer_desc: "Als Innovationsführer in der industriellen Automatisierung sind wir auf KI-basierte Cobot-Lösungen spezialisiert.",
-        hero_btn_product: "Produkte ansehen",
-        hero_btn_video: "Video ansehen",
+        hero_btn_product: "Produkte entdecken",
+        hero_btn_guide: "Produktleitfaden",
         stat_partners: "Globale Partner",
         stat_prod: "Produktivitätssteigerung",
         stat_accident: "Unfallrate",
@@ -731,6 +821,14 @@ const translations = {
         form_content: "Nachricht",
         form_title_ph: "Betreff eingeben",
         form_content_ph: "Geben Sie die Details Ihrer Anfrage ein",
+        form_type: "Anfragetyp",
+        type_purchase: "Kaufanfrage",
+        type_refund: "Rückerstattungsanfrage",
+        type_as: "Kundendienst (A/S)",
+        type_tech: "Technischer Support",
+        type_other: "Sonstiges",
+        qna_success: "<i class='fas fa-check-circle'></i> Anfrage erfolgreich gesendet. Wir werden Sie in Kürze kontaktieren!",
+        qna_error: "<i class='fas fa-exclamation-circle'></i> Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
         board_write: "Anfrage absenden",
         board_search_ph: "Nach interessanten Themen suchen",
         new_post_btn: "Neuen Beitrag schreiben",
@@ -939,18 +1037,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const features = [t[`${modelKey}_f1`], t[`${modelKey}_f2`], t[`${modelKey}_f3`], t[`${modelKey}_f4`]];
 
         const modalHTML = `
-            <div class="modal-overlay" id="productModal" style="display:flex; padding: 20px;">
-                <div class="modal-content" style="max-width: 850px; max-height: 90vh; padding: 0; overflow-y: auto; border-radius: 28px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); scrollbar-width: thin;">
+            <div class="modal-overlay" id="productModal" style="display:flex; padding: 10px;">
+                <div class="modal-content" style="max-width: 1100px; width: 95%; max-height: 96vh; padding: 0; overflow-y: auto; border-radius: 28px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); scrollbar-width: thin;">
                     <span class="modal-close" id="closeProdModal" style="top: 20px; right: 25px; color: #94a3b8; font-size: 32px; z-index: 10;">&times;</span>
                     <div style="display: flex; flex-direction: column;">
                         <!-- Header Section with optimized space -->
-                        <div style="background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%); padding: 40px 30px; text-align: center; border-bottom: 1px solid #e2e8f0;">
-                            <img src="images/${modelId.toLowerCase()}.png" style="height: 180px; display: block; margin: 0 auto 20px; filter: drop-shadow(0 20px 35px rgba(0,0,0,0.15));">
-                            <h2 style="font-size: 2.8rem; color: #0f172a; font-weight: 900; letter-spacing: -1.5px; margin: 0;">${title}</h2>
-                            <div style="display: inline-block; background: #3b82f6; color: white; padding: 5px 20px; border-radius: 100px; font-weight: 800; margin-top: 15px; font-size: 0.8rem; text-transform: uppercase;">AI-Powered Cobot</div>
+                        <div style="background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%); padding: 30px 20px; text-align: center; border-bottom: 1px solid #e2e8f0;">
+                            <img src="images/${modelId.toLowerCase()}.png" style="height: 160px; display: block; margin: 0 auto 15px; filter: drop-shadow(0 20px 35px rgba(0,0,0,0.15));">
+                            <h2 style="font-size: 2.6rem; color: #0f172a; font-weight: 900; letter-spacing: -1.5px; margin: 0;">${title}</h2>
+                            <div style="display: inline-block; background: #3b82f6; color: white; padding: 4px 18px; border-radius: 100px; font-weight: 800; margin-top: 12px; font-size: 0.75rem; text-transform: uppercase;">AI-Powered Cobot</div>
                         </div>
 
-                        <div class="modal-info-grid" style="padding: 35px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; background: white;">
+                        <div class="modal-info-grid" style="padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; background: white;">
                             <!-- Left Content -->
                             <div>
                                 <h3 style="font-size: 1.3rem; color: #1e293b; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; font-weight: 800;">
@@ -997,7 +1095,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <strong style="color: #0f172a;">${specs.dof}</strong>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary" style="width: 100%; margin-top: 35px; padding: 18px; border-radius: 12px; font-weight: 800; font-size: 1rem;" onclick="document.getElementById('productModal').remove()">${t.close}</button>
+                                <button class="btn btn-primary" style="width: 100%; margin-top: 25px; padding: 15px; border-radius: 12px; font-weight: 800; font-size: 1rem;" onclick="document.getElementById('productModal').remove()">${t.close}</button>
                             </div>
                         </div>
                     </div>

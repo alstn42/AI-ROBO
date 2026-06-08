@@ -18,6 +18,7 @@ const translations = {
         spec_precision: "반복 정밀도",
         // Community
         qna_title: "1:1 기술 문의",
+        btn_view_guide: "가이드 보기",
         form_name: "이름",
         form_email: "이메일",
         form_title: "제목",
@@ -25,6 +26,14 @@ const translations = {
         form_title_ph: "제목을 입력하세요",
         form_content_ph: "자세한 문의 내용을 입력해 주세요",
         board_write: "문의 등록하기",
+        form_type: "문의 유형",
+        type_purchase: "구매 문의",
+        type_refund: "환불 문의",
+        type_as: "AS 문의",
+        type_tech: "기술 지원",
+        type_other: "기타",
+        qna_success: "문의가 성공적으로 전송되었습니다.",
+        qna_error: "오류가 발생했습니다.",
         // Board
         lounge_title: "Lounge & Connect",
         lounge_desc: "사용자들이 들려주는 로봇 기술의 살아있는 이야기"
@@ -48,6 +57,7 @@ const translations = {
         spec_precision: "Precision",
         // Community
         qna_title: "1:1 Technical Inquiry",
+        btn_view_guide: "View Guide",
         form_name: "Name",
         form_email: "Email",
         form_title: "Subject",
@@ -55,6 +65,14 @@ const translations = {
         form_title_ph: "Enter subject",
         form_content_ph: "Enter your message in detail",
         board_write: "Submit Inquiry",
+        form_type: "Inquiry Type",
+        type_purchase: "Purchase Inquiry",
+        type_refund: "Refund Inquiry",
+        type_as: "Repair & Support (A/S)",
+        type_tech: "Technical Support",
+        type_other: "Other",
+        qna_success: "Inquiry sent successfully.",
+        qna_error: "An error occurred.",
         // Board
         lounge_title: "Lounge & Connect",
         lounge_desc: "Vibrant stories of robot technology shared by users"
